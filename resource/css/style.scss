@@ -22,8 +22,9 @@ header {
     animation: fadeInDown;
     animation-duration: 1.5s;
 
-    .navlogo {
+    .navlogo i {
         color: $brown;
+        font-size: 2rem;
     }
 
     .grpButton { 
@@ -86,8 +87,8 @@ header {
         display: block;
         transition: 0.3s;
 
-        span {
-            padding: 0 40px 0 0;
+        i {
+            padding: 0 1rem 0 0;
             color: $white;
         }
     }
@@ -108,7 +109,7 @@ header {
     background-color: $brown;
     transition: 0.5s;
 
-    .navlogo {
+    .navlogo i {
         color: $beige;
     }
 
