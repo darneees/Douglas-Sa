@@ -20,8 +20,9 @@ header {
   animation: fadeInDown;
   animation-duration: 1.5s;
 }
-header .navlogo {
+header .navlogo i {
   color: #1f1920;
+  font-size: 2rem;
 }
 header .grpButton {
   display: flex;
@@ -81,8 +82,8 @@ header .grpButton .openBtn:hover {
   display: block;
   transition: 0.3s;
 }
-.sidePanel a span {
-  padding: 0 40px 0 0;
+.sidePanel a i {
+  padding: 0 1rem 0 0;
   color: #FCF7FF;
 }
 .sidePanel .closedBtn {
@@ -100,7 +101,7 @@ header .grpButton .openBtn:hover {
   background-color: #1f1920;
   transition: 0.5s;
 }
-.darkMode .navlogo {
+.darkMode .navlogo i {
   color: #d48c80;
 }
 .darkMode .grpButton .toggle {
