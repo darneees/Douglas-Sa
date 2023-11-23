@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import css -->
+    <link rel="stylesheet" href="stile.css">
+    <!-- import icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- import favicon -->
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <!-- import animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Projetos</title>
+</head>
+<body>
+    <header id="header">
+        <div class="navlogo">
+            <span class="material-symbols-outlined">
+                qr_code
+            </span>
+        </div>
+        <nav id="mySidePanel" class="sidePanel">
+            <ul class="navMenu">
+                <a href="#" class="closedBtn" onclick="closedNav()">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </a>
+                <a href="../../../index.html" class="item">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>Sobre mim
+                </a>
+                <a href="../servicos/index.html" class="item">
+                    <span class="material-symbols-outlined">
+                        design_services
+                    </span>Serviços
+                </a>
+                <a href="../habilidades/index.html" class="item">
+                    <span class="material-symbols-outlined">
+                        data_object
+                    </span>Habilidades
+                </a>
+                <a href="../contato/index.html" class="item">
+                    <span class="material-symbols-outlined">
+                        contacts
+                    </span>Contato
+                </a>
+            </ul>
+        </nav>
+
+        <div class="grpButton">
+            <button class="toggle" onclick="toggleTheme()">
+                <span class="material-symbols-outlined">
+                    dark_mode
+                </span>
+            </button>
+    
+            <button class="openBtn" onclick="openNav()">
+                <span class="material-symbols-outlined">
+                    menu_open
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            
+            <div class="card">
+                <header class="header">
+                    <img src="../img/banner.png" alt="image">
+                </header>
+                <article class="info">
+                    <h1 class="title">Summary Card</h1>
+                </article>
+                <footer class="footer">
+                    <p class="tag">#HTML #CSS #SASS<br>#JAVASCRIPT </p>
+                    <button type="button" class="action">
+                        Demo
+                        <span class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                    </button>
+                </footer>
+            </div>
+
+            <div class="card">
+                <header class="header">
+                    <img src="../img/e-store.png" alt="image">
+                </header>
+                <article class="info">
+                    <h1 class="title">E-Store</h1>
+                </article>
+                <footer class="footer">
+                    <p class="tag">#HTML #CSS<br>#JAVASCRIPT</p>
+                    <button type="button" class="action">
+                        Demo
+                        <span class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                    </button>
+                </footer>
+            </div>
+
+            <div class="card">
+                <header class="header">
+                    <img src="../img/portifolio.png" alt="image">
+                </header>
+                <article class="info">
+                    <h1 class="title">Portifolio</h1>
+                </article>
+                <footer class="footer">
+                    <p class="tag">#HTML #CSS<br>#JAVASCRIPT</p>
+                    <button type="button" class="action">
+                        Demo
+                        <span class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                    </button>
+                </footer>
+            </div>
+
+            <div class="card">
+                <header class="header">
+                    <img src="../img/qcode.png" alt="image">
+                </header>
+                <article class="info">
+                    <h1 class="title">Qr Code</h1>
+                </article>
+                <footer class="footer">
+                    <p class="tag">#HTML #CSS<br>#JAVASCRIPT</p>
+                    <button type="button" class="action">
+                        Demo
+                        <span class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                    </button>
+                </footer>
+            </div>
+
+            <span class="reserved"><strong>© Douglas Sá.</strong> All rigths reserved.</span>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

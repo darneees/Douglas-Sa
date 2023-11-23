@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douglas Sa</title>
+    <!-- import css -->
+    <link rel="stylesheet" href="resource/css/style.css">
+    <!-- import icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- import favicon -->
+    <link rel="shortcut icon" href="resource/img/favicon.ico" type="image/x-icon">
+    <!-- import animation/transition -->
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+
+    <header>
+        <div class="navlogo">
+            <span class="material-symbols-outlined">
+                qr_code
+            </span>
+        </div>
+        <nav id="mySidePanel" class="sidePanel">
+            <ul class="navMenu">
+                <a href="#" class="closedBtn" onclick="closedNav()">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </a>
+                <a href="resource/links/servicos/index.html" class="item">
+                    <span class="material-symbols-outlined">
+                        design_services
+                    </span>Serviços
+                </a>
+                <a href="resource/links/projetos/index.html" class="item">
+                    <span class="material-symbols-outlined">
+                        folder_open
+                    </span>Projetos
+                </a>
+                <a href="resource/links/habilidades/index.html" class="item">
+                    <span class="material-symbols-outlined">
+                        data_object
+                    </span>Habilidades
+                </a>
+                <a href="resource/links/contato/index.html" class="item">
+                    <span class="material-symbols-outlined">
+                        contacts
+                    </span>Contato
+                </a>
+            </ul>
+        </nav>
+
+        <div class="grpButton">
+            <button class="toggle" onclick="toggleTheme()" >
+                <span class="material-symbols-outlined">
+                    dark_mode
+                </span>
+            </button>
+    
+            <button class="openBtn" onclick="openNav()">
+                <span class="material-symbols-outlined">
+                    menu_open
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="secContainer">
+            <div class="secContent">
+                <h1>Douglas Sá</h1>
+                <span>Desenvolvedor Front-End Jr.</span>
+                <p>Olá! Atualmente estou atuando como estagiário na área, buscando evoluir minhas habilidades e contribuir para a criação de experiências digitais excepcionais.</p>
+            </div>
+
+            <div class="secImage">
+                <img src="resource/img/userLightTheme.webp" alt="code" id="userImage">
+            </div>
+            
+            <span class="reserved"><strong>©  Douglas Sá</strong>. All rigths reserved.</span>
+
+            <div class="about__wave"></div>
+        </section>
+    </main>
+
+    <script src="resource/js/app.js"></script>
+
+</body>
+
+</html>
