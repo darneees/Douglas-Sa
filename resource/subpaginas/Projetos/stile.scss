@@ -1,14 +1,13 @@
 @import 'varibles',
         'funtion';
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    user-select: none;
+    font-family: 'Sora', sans-serif;
 }
 
 body {
@@ -23,8 +22,9 @@ body {
     animation: fadeInDown;
     animation-duration: 1.5s;
 
-    .navlogo {
+    .navlogo i {
         color: $brown;
+        font-size: 2rem;
     }
 
     .grpButton {
@@ -32,9 +32,10 @@ body {
         gap: 1rem;
 
         .toggle {
+            @include align (center, row, center);
             background-color: transparent;
             color: $brown;
-            font-size: 2rem;
+            font-size: 1.6rem;
             border: 3px solid $brown;
             border-radius: .8rem;
             height: 55px;
@@ -50,9 +51,10 @@ body {
         }
 
         .openBtn {
+            @include align (center, row, center);
             background-color: $brown;
             color: $white;
-            font-size: 2rem;
+            font-size: 1.6rem;
             border: none;
             border-radius: .8rem;
             height: 55px;
@@ -90,10 +92,9 @@ body {
         display: block;
         transition: 0.3s;
 
-        span {
-            padding: 0 40px 0 0;
+        i {
+            padding: 0 1rem 0 0;
             color: $white;
-            opacity: 0.2;
         }
     }
 
