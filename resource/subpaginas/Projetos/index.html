@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- import css -->
     <link rel="stylesheet" href="stile.css">
     <!-- import icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- import favicon -->
     <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
     <!-- import animation -->
@@ -17,51 +17,39 @@
 <body>
     <header id="header">
         <div class="navlogo">
-            <span class="material-symbols-outlined">
-                qr_code
-            </span>
+            <i class="ph-bold ph-qr-code"></i>
         </div>
         <nav id="mySidePanel" class="sidePanel">
             <ul class="navMenu">
                 <a href="#" class="closedBtn" onclick="closedNav()">
-                    <span class="material-symbols-outlined">
-                        close
-                    </span>
+                    <i class="ph-bold ph-x"></i>
                 </a>
                 <a href="../../../index.html" class="item">
-                    <span class="material-symbols-outlined">
-                        person
-                    </span>Sobre mim
+                    <i class="ph-bold ph-user"></i>
+                    Sobre mim
                 </a>
                 <a href="../servicos/index.html" class="item">
-                    <span class="material-symbols-outlined">
-                        design_services
-                    </span>Serviços
+                    <i class="ph-bold ph-pencil-line"></i>
+                    Serviços
                 </a>
                 <a href="../habilidades/index.html" class="item">
-                    <span class="material-symbols-outlined">
-                        data_object
-                    </span>Habilidades
+                    <i class="ph-bold ph-trophy"></i>
+                    Habilidades
                 </a>
                 <a href="../contato/index.html" class="item">
-                    <span class="material-symbols-outlined">
-                        contacts
-                    </span>Contato
+                    <i class="ph-bold ph-chat-dots"></i>
+                    Contato
                 </a>
             </ul>
         </nav>
 
         <div class="grpButton">
             <button class="toggle" onclick="toggleTheme()">
-                <span class="material-symbols-outlined">
-                    dark_mode
-                </span>
+                <i class="ph-bold ph-moon"></i>
             </button>
     
             <button class="openBtn" onclick="openNav()">
-                <span class="material-symbols-outlined">
-                    menu_open
-                </span>
+                <i class="ph-bold ph-text-outdent"></i>
             </button>
         </div>
     </header>
