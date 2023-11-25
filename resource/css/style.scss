@@ -1,13 +1,13 @@
 @import 'varibles',
-'funtion';
+        'funtion';
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sora', sans-serif;
 }
 
 body {
@@ -32,9 +32,10 @@ header {
         gap: 10px;
 
         .toggle {
+            @include align (center, row, center);
             background-color: transparent;
             color: $brown;
-            font-size: 2rem;
+            font-size: 1.6rem;
             border: 3px solid $brown;
             cursor: pointer;
             border-radius: 10px;
@@ -48,9 +49,10 @@ header {
         }
 
         .openBtn {
+            @include align (center, row, center);
             background-color: $brown;
             color: $white;
-            font-size: 2rem;
+            font-size: 1.6rem;
             border: none;
             cursor: pointer;
             border-radius: 10px;
@@ -144,11 +146,12 @@ header {
         a {
             color: $brown;
 
-            &:hover {
+            &:hover ,
+            &:hover i {
                 color: $white;
             }
 
-            span {
+            i {
                 color: $brown;
             }
         }
