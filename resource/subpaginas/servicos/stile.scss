@@ -1,14 +1,13 @@
 @import 'varibles',
-        'funtion';
+        'funtion'; 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    user-select: none;
+    font-family: 'Sora', sans-serif;
 }
 
 
@@ -20,8 +19,9 @@ header {
     animation: fadeInDown;
     animation-duration: 1.5s;
 
-    .navlogo {
+    .navlogo i {
         color: $brown;
+        font-size: 2rem;
     }
 
     .grpButton {
@@ -29,9 +29,10 @@ header {
         gap: 1rem;
 
         .toggle {
+            @include align (center, row, center);
             background-color: transparent;
             color: $brown;
-            font-size: 2rem;
+            font-size: 1.6rem;
             border: 3px solid $brown;
             border-radius: .8rem;
             height: 55px;
@@ -47,9 +48,10 @@ header {
         }
 
         .openBtn {
+            @include align (center, row, center);
             background-color: $brown;
             color: $white;
-            font-size: 2rem;
+            font-size: 1.6rem;
             border: none;
             border-radius: .8rem;
             height: 55px;
@@ -86,8 +88,8 @@ header {
         display: block;
         transition: 0.3s;
 
-        span {
-            padding: 0 40px 0 0;
+        i {
+            padding: 0 1rem 0 0;
             color: $white;
         }
     }
@@ -108,7 +110,7 @@ header {
     background-color: $brown;
     transition: 0.5s;
 
-    .navlogo {
+    .navlogo i {
         color: $beige;
     }
 
@@ -169,7 +171,7 @@ header {
                 background-color: $beige;
                 border: none;
 
-                span {
+                i {
                     color: $white;
                 }
 
@@ -187,7 +189,7 @@ header {
                 border: 6px solid $beige;
                 padding: 30px 20px 20px 20px;
 
-                span {
+                i {
                     color: $white;
                 }
 
@@ -205,7 +207,7 @@ header {
                 background-color: $beige;
                 border: none;
 
-                span {
+                i {
                     color: $white;
                 }
 
@@ -265,7 +267,6 @@ header {
 
 
             .icon {
-                font-size: 4rem;
                 color: $brown;
             }
 
@@ -276,13 +277,12 @@ header {
 
             .link {
                 position: absolute;
-                top: 15px;
-                right: 15px;
+                top: 1rem;
+                right: 1rem;
 
-                span {
+                i {
                     color: $lightGreen;
-                    padding: 1px 0 0 0;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                 }
             }
         }
@@ -297,11 +297,10 @@ header {
             border-radius: 20px;
             padding: 30px 20px 40px 20px;
 
-            animation: 2s cubic-bezier(.25, 1, .30, 1) square-in-center both;
+            animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-center both;
 
             .icon {
                 color: $white;
-                font-size: 4rem;
             }
 
             h2 {
@@ -311,14 +310,13 @@ header {
 
             .link {
                 position: absolute;
-                top: 15px;
-                right: 15px;
+                top: 1rem;
+                right: 1rem;
 
 
-                span {
+                i {
                     color: $lightGreen;
-                    padding: 1px 0 0 0;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                 }
             }
 
@@ -334,11 +332,10 @@ header {
             padding: 30px 20px 65px 20px;
             gap: 10px;
 
-            animation: 2s cubic-bezier(.25, 1, .30, 1) square-in-center both;
+            animation: 3s cubic-bezier(.25, 1, .30, 1) square-in-center both;
 
 
             .icon {
-                font-size: 4rem;
                 color: $brown;
             }
 
@@ -349,13 +346,12 @@ header {
 
             .link {
                 position: absolute;
-                top: 15px;
-                right: 15px;
+                top: 1rem;
+                right: 1rem;
 
-                span {
+                i {
                     color: $lightGreen;
-                    padding: 1px 0 0 0;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                 }
             }
         }
@@ -396,8 +392,8 @@ header {
         padding: 0;
 
         h1 {
-            font-size: 2.5rem;
-            margin: 0 0 20px 0;
+            font-size: 3rem;
+            margin:0;
         }
 
         .serContent {
@@ -407,7 +403,7 @@ header {
                 padding: 30px 20px 50px 20px;
 
                 .icon {
-                    font-size: 3rem;
+                    font-size: 4.5rem;
                 }
 
                 h2 {
@@ -419,9 +415,8 @@ header {
                 padding: 30px 20px;
 
                 .icon {
-                    font-size: 3rem;
+                    font-size: 4.5rem;
                 }
-
                 h2 {
                     font-size: 1.2rem;
                 }
@@ -431,7 +426,7 @@ header {
                 padding: 30px 20px 50px 20px;
 
                 .icon {
-                    font-size: 3rem;
+                    font-size: 4.5rem;
                 }
 
                 h2 {
@@ -449,7 +444,7 @@ header {
         padding: 0;
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0 0 20px 0;
         }
 
