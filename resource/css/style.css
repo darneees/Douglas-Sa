@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Sora", sans-serif;
 }
 
 body {
@@ -32,9 +32,13 @@ header .grpButton {
   gap: 10px;
 }
 header .grpButton .toggle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   background-color: transparent;
   color: #1f1920;
-  font-size: 2rem;
+  font-size: 1.6rem;
   border: 3px solid #1f1920;
   cursor: pointer;
   border-radius: 10px;
@@ -46,9 +50,13 @@ header .grpButton .toggle:hover {
   color: #FCF7FF;
 }
 header .grpButton .openBtn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   background-color: #1f1920;
   color: #FCF7FF;
-  font-size: 2rem;
+  font-size: 1.6rem;
   border: none;
   cursor: pointer;
   border-radius: 10px;
@@ -127,10 +135,10 @@ header .grpButton .openBtn:hover {
 .darkMode .sidePanel a {
   color: #1f1920;
 }
-.darkMode .sidePanel a:hover {
+.darkMode .sidePanel a:hover, .darkMode .sidePanel a:hover i {
   color: #FCF7FF;
 }
-.darkMode .sidePanel a span {
+.darkMode .sidePanel a i {
   color: #1f1920;
 }
 .darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
