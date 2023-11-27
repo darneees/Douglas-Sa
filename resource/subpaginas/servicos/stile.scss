@@ -1,0 +1,697 @@
+@import 'varibles',
+        'funtion'; 
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+}
+
+
+header {
+    @include align (center, row, space-around);
+    width: 100%;
+    height: 15vh;
+
+    animation: fadeInDown;
+    animation-duration: 1.5s;
+
+    .navlogo i {
+        color: $brown;
+        font-size: 2rem;
+    }
+
+    .grpButton {
+        @include align (center, row, center);
+        gap: 1rem;
+
+        .toggle {
+            @include align (center, row, center);
+            background-color: transparent;
+            color: $brown;
+            font-size: 1.6rem;
+            border: 3px solid $brown;
+            border-radius: .8rem;
+            height: 55px;
+            width: 55px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $brown;
+                border: none;
+                color: $white;
+                transition: .3s;
+            }
+        }
+
+        .openBtn {
+            @include align (center, row, center);
+            background-color: $brown;
+            color: $white;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: .8rem;
+            height: 55px;
+            width: 55px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $white;
+                border: 3px solid $brown;
+                color: $brown;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.sidePanel {
+    width: 0;
+    height: 350px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: $brown;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 0 0 0;
+    z-index: 3;
+
+    a {
+        padding: 15px 15px 15px 50px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $white;
+        display: block;
+        transition: 0.3s;
+
+        i {
+            padding: 0 1rem 0 0;
+            color: $white;
+        }
+    }
+
+    .closedBtn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font: 2rem;
+    }
+}
+
+.sidePanel:has(.item:hover) .item:not(:hover) {
+    opacity: 0.1;
+}
+
+.darkMode {
+    background-color: $brown;
+    transition: 0.5s;
+
+    .navlogo i {
+        color: $beige;
+    }
+
+    .grpButton {
+
+        .toggle {
+
+            border: 3px solid $beige;
+            color: $beige;
+
+            &:hover {
+                background-color: $beige;
+                border: none;
+                color: $white;
+            }
+        }
+
+
+        .openBtn {
+            background-color: $beige;
+            color: $white;
+
+            &:hover {
+                background-color: $white;
+                color: $brown;
+                border: none;
+            }
+        }
+
+    }
+
+    .sidePanel {
+        background-color: $beige;
+
+        a {
+            color: $white;
+
+            &:hover {
+                color: $brown;
+            }
+
+            span {
+                color: $brown;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .serContainer {
+
+        h1 {
+            color: $white;
+        }
+
+        .serContent {
+
+            .serCard:nth-child(1) {
+                background-color: $beige;
+                border: none;
+
+                i {
+                    color: $white;
+                }
+
+                h2 {
+                    color: $white;
+                    opacity: 1;
+                }
+
+                .link span {
+                    color: $lightGreen;
+                }
+            }
+
+            .serCard:nth-child(2) {
+                border: 6px solid $beige;
+                padding: 30px 20px 20px 20px;
+
+                i {
+                    color: $white;
+                }
+
+                h2 {
+                    color: $white;
+                    opacity: 1;
+                }
+
+                .link span {
+                    color: $lightGreen;
+                }
+            }
+
+            .serCard:nth-child(3) {
+                background-color: $beige;
+                border: none;
+
+                i {
+                    color: $white;
+                }
+
+                h2 {
+                    color: $white;
+                    opacity: 1;
+                }
+
+                .link span {
+                    color: $lightGreen;
+                }
+            }
+        }
+
+        .reserved {
+            color: $white;
+            opacity: 0.2;
+        }
+    }
+
+
+}
+
+.serContainer {
+    @include align (center, column, center);
+    height: 85vh;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+    h1 {
+        color: $brown;
+        font-size: 3rem;
+
+        animation: fadeInDown;
+        animation-duration: 1.5s;
+    }
+
+    .serContent {
+        @include align (center, row, center);
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+
+        .serCard:nth-child(1) {
+            @include align (start, column, flex-end);
+            position: relative;
+            width: $width;
+            height: $height;
+            border: 6px solid $brown;
+            border-radius: 20px;
+            padding: 30px 20px;
+            gap: 10px;
+
+            animation: 2s cubic-bezier(.25, 1, .30, 1) square-in-center both;
+
+
+            .icon {
+                color: $brown;
+            }
+
+            h2 {
+                color: $brown;
+                font-weight: 500;
+            }
+
+            .link {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+
+                i {
+                    color: $lightGreen;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .serCard:nth-child(2) {
+            @include align (start, column, flex-end);
+            position: relative;
+            gap: 10px;
+            width: $width;
+            height: $height;
+            background: $brown;
+            border-radius: 20px;
+            padding: 30px 20px 40px 20px;
+
+            animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-center both;
+
+            .icon {
+                color: $white;
+            }
+
+            h2 {
+                color: $white;
+                font-weight: 500;
+            }
+
+            .link {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+
+
+                i {
+                    color: $lightGreen;
+                    font-size: 2rem;
+                }
+            }
+
+        }
+
+        .serCard:nth-child(3) {
+            @include align (start, column, flex-end);
+            position: relative;
+            width: $width;
+            height: $height;
+            border: 6px solid $brown;
+            border-radius: 20px;
+            padding: 30px 20px 65px 20px;
+            gap: 10px;
+
+            animation: 3s cubic-bezier(.25, 1, .30, 1) square-in-center both;
+
+
+            .icon {
+                color: $brown;
+            }
+
+            h2 {
+                color: $brown;
+                font-weight: 500;
+            }
+
+            .link {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+
+                i {
+                    color: $lightGreen;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .reserved {
+        position: absolute;
+        font-weight: 400;
+        bottom: 1.1rem;
+        left: auto;
+        font-size: 1rem;
+        opacity: 1;
+        color: $brown;
+
+        animation: fadeInUp;
+        animation-duration: 1.5s;
+    }
+}
+
+// animation
+
+@keyframes square-in-center {
+    from {
+        clip-path: inset(100% 100% 100% 100%);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+// responsive
+
+@media (min-width: 1200px) {
+    .serContainer {
+        height: 85vh;
+        padding: 0;
+
+        h1 {
+            font-size: 3rem;
+            margin:0;
+        }
+
+        .serContent {
+            @include align (center, row, center);
+
+            .serCard:nth-child(1) {
+                padding: 30px 20px 50px 20px;
+
+                .icon {
+                    font-size: 4.5rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(2) {
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 4.5rem;
+                }
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(3) {
+                padding: 30px 20px 50px 20px;
+
+                .icon {
+                    font-size: 4.5rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .serContainer {
+        height: 85vh;
+        padding: 0;
+
+        h1 {
+            font-size: 3rem;
+            margin: 0 0 20px 0;
+        }
+
+        .serContent {
+            @include align (center, row, center);
+
+            .serCard:nth-child(1) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px 50px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(2) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(3) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px 50px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+
+        .reserved {
+            bottom: 10px;
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+    .serContainer {
+        height: auto;
+        padding: 0 0 40px 0;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+        }
+
+        .serContent {
+            @include align (center, column, center);
+
+            .serCard:nth-child(1) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(2) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(3) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+
+        .reserved {
+            bottom: 10px;
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media (min-width: 430px) and (max-width: 767px) {
+
+    .serContainer {
+        height: auto;
+        padding: 0 0 40px 0;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+        }
+
+        .serContent {
+            @include align (center, column, center);
+
+            .serCard:nth-child(1) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(2) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(3) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+
+        .reserved {
+            bottom: 10px;
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media (max-width: 429px) {
+
+    .serContainer {
+        height: auto;
+        padding: 0 0 40px 0;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+        }
+
+        .serContent {
+            @include align (center, column, center);
+
+            .serCard:nth-child(1) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(2) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .serCard:nth-child(3) {
+                width: $width;
+                height: calc(300px - 100px);
+                padding: 30px 20px;
+
+                .icon {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+
+        .reserved {
+            bottom: 5px;
+            font-size: 0.7rem;
+        }
+    }
+}
