@@ -1,0 +1,369 @@
+@import 'varibles',
+'funtion';
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+}
+
+header {
+    @include align (center, row, space-around);
+    width: 100%;
+    height: 10vh;
+
+    animation: fadeInDown;
+    animation-duration: 1.5s;
+
+    .navlogo i {
+        color: $brown;
+        font-size: 2rem;
+    }
+
+    .grpButton {
+        @include align (center, row, center);
+        gap: 1rem;
+
+        .toggle {
+            @include align (center, row, center);
+            background-color: transparent;
+            color: $brown;
+            font-size: 1.6rem;
+            border: 3px solid $brown;
+            border-radius: .8rem;
+            height: 55px;
+            width: 55px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $brown;
+                border: none;
+                color: $white;
+                transition: .3s;
+            }
+        }
+
+        .openBtn {
+            @include align (center, row, center);
+            background-color: $brown;
+            color: $white;
+            cursor: pointer;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: .8rem;
+            height: 55px;
+            width: 55px;
+
+            &:hover {
+                background-color: $white;
+                border: 3px solid $brown;
+                color: $brown;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.sidePanel {
+    width: 0;
+    height: 350px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: $brown;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 0 0 0;
+    z-index: 3;
+
+    a {
+        padding: 15px 15px 15px 50px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $white;
+        display: block;
+        transition: 0.3s;
+
+        i {
+            padding: 0 1rem 0 0;
+            color: $white;
+        }
+    }
+
+    .closedBtn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font: 2rem;
+    }
+}
+
+.sidePanel:has(.item:hover) .item:not(:hover) {
+    opacity: 0.1;
+}
+
+.darkMode {
+    background-color: $brown;
+    transition: 0.5s;
+
+    .navlogo i {
+        color: $white;
+    }
+
+    .grpButton {
+        .toggle {
+            color: $white;
+            border: 3px solid $white;
+
+            &:hover {
+                background-color: $beige;
+                border: none;
+                color: $white;
+            }
+        }
+
+        .openBtn {
+            background-color: $white;
+            color: $brown;
+
+            &:hover {
+                background-color: $beige;
+                color: $white;
+                border: none;
+            }
+        }
+    }
+
+    .sidePanel {
+        background-color: $beige;
+
+        a {
+            color: $brown;
+
+            &:hover {
+                color: $white;
+            }
+
+            span {
+                color: $brown;
+            }
+        }
+    }
+
+    .sidePanel:has(.item:hover) .item:not(:hover) {
+        opacity: 0.3;
+    }
+
+    .secContainer .secContent {
+
+        h1 {
+            color: $white;
+        }
+
+        p {
+            color: $beige;
+
+            span {
+                color: $beige;
+            }
+        }
+    }
+}
+
+.tech__container {
+    @include align (center, column, center);
+    width: $width;
+    height: $height;
+    position: relative;
+    z-index: 1;
+
+    .tech__header {
+        @include align (center, column, center);
+        position: absolute;
+        top: 130px;
+        text-align: center;
+
+        animation: fadeInDown;
+        animation-duration: 1.8s;
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: $brown;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: $brown;
+        }
+    }
+
+    .tech__box {
+        @include align (center, row, center);
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        position: relative;
+        gap: 2rem;
+
+        .tech__card:nth-child(1) {
+            @include align (center, column, flex-end);
+            position: relative;
+            background-color: $brown;
+            width: 200px;
+            height: 200px;
+            border-radius: 1rem;
+            border: 3px solid $brown;
+            padding: 0 0 2rem 0;
+            gap: 1rem;
+
+            .fa-html5 {
+                font-size: 3rem;
+                color: $white;
+            }
+
+            h1 {
+                color: $white;
+            }
+
+            .check {
+                position: absolute;
+                font-size: 1.2rem;
+                color: $lightGreen;
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        .tech__card:nth-child(2) {
+            @include align (center, column, flex-end);
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 3px solid $brown;
+            border-radius: 1rem;
+            padding: 0 0 2rem 0;
+            gap: 1rem;
+
+            .fa-css3-alt {
+                font-size: 3rem;
+                color: $brown;
+            }
+
+            h1 {
+                color: $brown;
+            }
+
+            .check {
+                position: absolute;
+                font-size: 1.2rem;
+                color: $lightGreen;
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        .tech__card:nth-child(3) {
+            @include align (center, column, flex-end);
+            position: relative;
+            background-color: $brown;
+            width: 200px;
+            height: 200px;
+            border-radius: 1rem;
+            border: 3px solid $brown;
+            padding: 0 0 2rem 0;
+            gap: 1rem;
+
+            .fa-js {
+                font-size: 3rem;
+                color: $white;
+            }
+
+            h1 {
+                color: $white;
+            }
+
+            .check {
+                position: absolute;
+                font-size: 1.2rem;
+                color: $lightGreen;
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        .tech__card:nth-child(4) {
+            @include align (center, column, flex-end);
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 3px solid $brown;
+            border-radius: 1rem;
+            padding: 0 0 2rem 0;
+            gap: 1rem;
+
+            .fa-sass {
+                font-size: 3rem;
+                color: $brown;
+            }
+
+            .check {
+                position: absolute;
+                font-size: 1.2rem;
+                color: $lightGreen;
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        .tech__card:nth-child(5) {
+            @include align (center, column, flex-end);
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 3px solid $brown;
+            border-radius: 1rem;
+            padding: 0 0 2rem 0;
+            gap: 1rem;
+
+            .fa-git-alt {
+                font-size: 3rem;
+                color: $brown;
+            }
+
+            .check {
+                position: absolute;
+                font-size: 1.2rem;
+                color: $lightGreen;
+                top: 10px;
+                right: 10px;
+            }
+        }
+    }
+
+    .reserved {
+        position: absolute;
+        font-weight: 400;
+        bottom: 20px;
+        left: auto;
+        font-size: 1rem;
+        opacity: 1;
+        color: $brown;
+        z-index: 1;
+        user-select: none;
+
+        animation: fadeInUp;
+        animation-duration: 2s;
+    }
+
+    .circle__background {
+        position: absolute;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        opacity: .1;
+    }
+}
