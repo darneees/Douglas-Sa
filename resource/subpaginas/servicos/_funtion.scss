@@ -1,0 +1,11 @@
+@mixin align ($align, $direction, $justify) {
+    display: flex;
+    align-items: $align;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+// sixze cards
+
+$width: 270px;
+$height: 270px;
