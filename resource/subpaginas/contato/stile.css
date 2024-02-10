@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+}
+header .navlogo i {
+  color: #1f1920;
+  font-size: 2rem;
+}
+header .grpButton {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+header .grpButton .toggle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+  color: #1f1920;
+  font-size: 1.6rem;
+  border: 3px solid #1f1920;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 55px;
+  width: 55px;
+}
+header .grpButton .toggle:hover {
+  background-color: #1f1920;
+  color: #FCF7FF;
+}
+header .grpButton .openBtn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #1f1920;
+  color: #FCF7FF;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 55px;
+  width: 55px;
+}
+header .grpButton .openBtn:hover {
+  background-color: transparent;
+  border: 3px solid #1f1920;
+  color: #1f1920;
+  transition: 0.5s;
+}
+
+.sidePanel {
+  width: 0;
+  height: 350px;
+  top: 0;
+  right: 0;
+  position: fixed;
+  background-color: #1f1920;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding: 60px 0 0 0;
+  z-index: 3;
+}
+.sidePanel a {
+  padding: 15px 15px 15px 50px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #FCF7FF;
+  display: block;
+  transition: 0.3s;
+}
+.sidePanel a i {
+  padding: 0 1rem 0 0;
+  color: #FCF7FF;
+}
+.sidePanel .closedBtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font: 2rem;
+}
+
+.sidePanel:has(.item:hover) .item:not(:hover) {
+  opacity: 0.1;
+}
+
+.darkMode {
+  background-color: #1f1920;
+  transition: 0.5s;
+}
+.darkMode .navlogo i {
+  color: #FCF7FF;
+}
+.darkMode .grpButton .toggle {
+  border: 3px solid #FCF7FF;
+  color: #FCF7FF;
+}
+.darkMode .grpButton .toggle:hover {
+  border: 2px solid #1f1920;
+  background-color: #d48c80;
+}
+.darkMode .grpButton .openBtn {
+  background-color: #FCF7FF;
+  color: #1f1920;
+}
+.darkMode .grpButton .openBtn:hover {
+  background-color: #d48c80;
+  border: none;
+  color: #FCF7FF;
+}
+.darkMode .sidePanel {
+  background-color: #d48c80;
+}
+.darkMode .sidePanel a {
+  color: #1f1920;
+}
+.darkMode .sidePanel a:hover, .darkMode .sidePanel a:hover i {
+  color: #FCF7FF;
+}
+.darkMode .sidePanel a i {
+  color: #1f1920;
+}
+.darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
+  opacity: 0.3;
+}/*# sourceMappingURL=stile.css.map */

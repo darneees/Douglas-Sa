@@ -1,0 +1,835 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(12, 12, 12, 0.088) 2px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -5px -5px;
+  overflow: hidden;
+}
+body #loader {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #17171A;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 6;
+}
+body #loader .spinner {
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  border: 0.281rem solid #121214;
+  border-radius: 100%;
+  border-color: rgba(175, 171, 182, 0.1254901961) rgba(0, 0, 0, 0);
+  animation: spinner-e04l1k 1s infinite linear;
+}
+body #loader .spinner::before, body #loader .spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 0.15rem;
+  border: inherit;
+  border-radius: 100%;
+}
+body #loader .spinner::before {
+  border-color: #fafafa rgba(0, 0, 0, 0);
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+body #loader .spinner::after {
+  margin: 0.55rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+  position: relative;
+}
+header .navlogo i {
+  color: #121214;
+  font-size: 2rem;
+}
+header .grpButton {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #121214;
+  color: #fafafa;
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
+  width: 8.5rem;
+  height: 3rem;
+}
+header .grpButton .toggle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+  color: #fafafa;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  height: 55px;
+  width: 55px;
+}
+header .grpButton .toggle:hover {
+  color: rgba(175, 171, 182, 0.6509803922);
+  transition: 0.5s;
+}
+header .grpButton .openBtn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+  color: #fafafa;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 55px;
+  width: 55px;
+}
+header .grpButton .openBtn:hover {
+  color: rgba(175, 171, 182, 0.6509803922);
+  transition: 0.5s;
+}
+
+.sidePanel {
+  background-color: #202024;
+  width: 0;
+  height: 350px;
+  top: 0;
+  right: 0;
+  position: fixed;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding: 60px 0 0 0;
+  z-index: 3;
+  border-radius: 0 0 0 1rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
+}
+.sidePanel a {
+  padding: 15px 15px 15px 50px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fafafa;
+  display: block;
+  transition: 0.3s;
+}
+.sidePanel a i {
+  padding: 0 1rem 0 0;
+  color: rgba(175, 171, 182, 0.6509803922);
+}
+.sidePanel .closedBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.sidePanel .closedBtn i {
+  font-size: 2rem;
+  color: #fafafa;
+}
+
+.sidePanel:has(.item:hover) .item:not(:hover) {
+  opacity: 0.1;
+}
+
+.darkMode {
+  background-color: #17171A;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -5px -5px;
+  transition: 0.5s;
+}
+.darkMode .navlogo i {
+  color: #fafafa;
+}
+.darkMode .grpButton {
+  background-color: #fafafa;
+}
+.darkMode .grpButton .toggle {
+  color: #121214;
+}
+.darkMode .grpButton .toggle:hover {
+  color: #AFABB6;
+}
+.darkMode .grpButton .openBtn {
+  color: #121214;
+}
+.darkMode .grpButton .openBtn:hover {
+  color: #AFABB6;
+}
+.darkMode .sidePanel {
+  border: 5px solid rgba(175, 171, 182, 0.1254901961);
+  background-color: #202024;
+}
+.darkMode .sidePanel a {
+  color: #fafafa;
+}
+.darkMode .sidePanel a:hover, .darkMode .sidePanel a:hover i {
+  color: #fafafa;
+}
+.darkMode .sidePanel a i {
+  color: rgba(175, 171, 182, 0.6509803922);
+}
+.darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
+  opacity: 0.15;
+}
+.darkMode .secContainer #modal {
+  background-color: #202024;
+}
+.darkMode .secContainer #modal h2 {
+  color: #fafafa;
+}
+.darkMode .secContainer #modal p {
+  color: #AFABB6;
+}
+.darkMode .secContainer #modal #closeBtn {
+  color: #fafafa;
+}
+.darkMode .secContainer #modal article ul li {
+  color: #AFABB6;
+}
+.darkMode .secContainer #modal article ul li i {
+  color: #17b380;
+}
+.darkMode .secContainer #modal .cv-link {
+  background-color: transparent;
+  border: 3px solid rgba(175, 171, 182, 0.6509803922);
+  color: #fafafa;
+}
+.darkMode .secContainer #modal .cv-link i {
+  background-color: #fafafa;
+  border: 3px solid #121214;
+  color: #202024;
+}
+.darkMode .secContainer #modal .cv-link:hover i {
+  background-color: #17b380;
+  border: 3px solid #202024;
+  color: #fafafa;
+}
+.darkMode .secContainer .secContent h1 {
+  color: #17171A;
+  text-shadow: -1px -1px 0 #fafafa, 1px -1px 0 #fafafa, -1px 1px 0 #fafafa, 1px 1px 0 #fafafa;
+}
+.darkMode .secContainer .secContent span {
+  color: #AFABB6;
+  opacity: 1;
+}
+.darkMode .secContainer .secContent p {
+  color: #AFABB6;
+}
+.darkMode .secContainer .secContent #modalBtn {
+  color: #fafafa;
+}
+.darkMode .secContainer .secContent #modalBtn i {
+  color: #fafafa;
+}
+.darkMode .secContainer .reserved {
+  color: #fafafa;
+  opacity: 0.5;
+}
+
+.secContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 90vh;
+  text-align: start;
+  z-index: 2;
+  position: relative;
+}
+.secContainer #overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.secContainer #modal {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fafafa;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
+  position: fixed;
+  top: auto;
+  left: auto;
+  width: 35rem;
+  height: 34.5rem;
+  z-index: 5;
+  border-radius: 1rem;
+  padding: 3rem 2rem 0 2rem;
+  gap: 2rem;
+  display: none;
+}
+.secContainer #modal h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #202024;
+  margin: 1rem 0 0 0;
+}
+.secContainer #modal p {
+  font-size: 1.2rem;
+  text-indent: 1rem;
+  font-weight: 300;
+  opacity: 0.9;
+  color: #202024;
+}
+.secContainer #modal #closeBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 3rem;
+  color: #202024;
+  opacity: 1;
+  cursor: pointer;
+}
+.secContainer #modal article {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.secContainer #modal article ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  text-align: start;
+  list-style: none;
+}
+.secContainer #modal article ul li {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #202024;
+  opacity: 0.9;
+}
+.secContainer #modal article ul li #load {
+  color: #F2CD5C;
+}
+.secContainer #modal article ul li i {
+  color: #17b380;
+  font-size: 1.5rem;
+  padding: 0 1rem 0 0;
+}
+.secContainer #modal .cv-link {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 1.5rem;
+  text-decoration: none;
+  background-color: #fafafa;
+  border: 3px solid #202024;
+  color: #202024;
+  width: 12rem;
+  height: 4rem;
+  border-radius: 0.6rem;
+  padding: 0 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.secContainer #modal .cv-link i {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #202024;
+  border: 3px solid #fafafa;
+  font-size: 1.2rem;
+  color: #fafafa;
+  height: 100%;
+  width: 4rem;
+  position: absolute;
+  right: 0;
+  border-radius: 0.5rem;
+}
+.secContainer #modal .cv-link:hover i {
+  background-color: #17b380;
+  color: #fafafa;
+  width: 100%;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+.secContainer .secContent {
+  position: relative;
+  z-index: 3;
+}
+.secContainer .secContent h1 {
+  color: #121214;
+  font-size: 5.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 800;
+}
+.secContainer .secContent span {
+  color: #202024;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.secContainer .secContent p {
+  margin: 0.9rem 0 0 0;
+  font-size: 1.2rem;
+  color: #202024;
+  text-indent: 15px;
+  opacity: 0.6;
+  margin: 1rem 0 1rem 0;
+}
+.secContainer .secContent #modalBtn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: transparent;
+  color: #202024;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  width: 7rem;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.secContainer .secContent #modalBtn i {
+  color: #202024;
+  font-size: 1.5rem;
+}
+.secContainer .secImage {
+  width: 450px;
+  z-index: 2;
+  animation: 10s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+}
+.secContainer .secImage img {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
+  animation: ocean 4s linear infinite;
+}
+.secContainer .reserved {
+  position: absolute;
+  font-weight: 400;
+  bottom: 20px;
+  left: auto;
+  font-size: 1rem;
+  opacity: 1;
+  color: #202024;
+  z-index: 2;
+  animation: fadeInUp;
+  animation-duration: 2s;
+}
+.secContainer .about__wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/wave__lightTheme.svg) bottom center no-repeat;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+@keyframes ocean {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30%/40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50%/30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100%/100% 100% 60% 60%;
+  }
+}
+@keyframes circle-in-center {
+  from {
+    -webkit-clip-path: circle(0%);
+            clip-path: circle(0%);
+  }
+  to {
+    -webkit-clip-path: circle(125%);
+            clip-path: circle(125%);
+  }
+}
+@keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@media (min-width: 2000px) {
+  .secContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: start;
+  }
+  .secContainer .secContent span {
+    font-size: 1.5rem;
+  }
+  .secContainer .secContent p {
+    width: 600px;
+  }
+  .secContainer .secImage {
+    width: 550px;
+  }
+  .secContainer .reserved {
+    bottom: 1.2rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1999px) {
+  header .navlogo i {
+    font-size: 2rem;
+  }
+  header .grpButton .toggle {
+    font-size: 1.5rem;
+    height: 3.3rem;
+    width: 3.3rem;
+  }
+  header .grpButton .openBtn {
+    font-size: 1.5rem;
+    height: 3.3rem;
+    width: 3.3rem;
+  }
+  .secContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: start;
+  }
+  .secContainer #modal {
+    top: 10%;
+  }
+  .secContainer .secContent span {
+    font-size: 1.1rem;
+  }
+  .secContainer .secContent p {
+    width: 525px;
+  }
+  .secContainer .secImage {
+    width: 490px;
+  }
+  .secContainer .reserved {
+    bottom: 1.2rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  header .navlogo i {
+    font-size: 1.5rem;
+  }
+  header .grpButton .toggle {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  header .grpButton .openBtn {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  .secContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .secContainer #modal {
+    top: auto;
+    max-width: 90%;
+    height: 32rem;
+    padding: 2rem 2rem 0 2rem;
+  }
+  .secContainer #modal p {
+    display: none;
+  }
+  .secContainer #modal .cv-link {
+    width: 11.5rem;
+    height: 3.5rem;
+    bottom: 2.5rem;
+  }
+  .secContainer #modal .cv-link i {
+    width: 3.2rem;
+    font-size: 1rem;
+  }
+  .secContainer #modal .cv-link:hover i {
+    font-size: 1.5rem;
+  }
+  .secContainer .secContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .secContainer .secContent h1 {
+    font-size: 3rem;
+  }
+  .secContainer .secContent span {
+    font-size: 1rem;
+  }
+  .secContainer .secContent p {
+    font-size: 1rem;
+    width: 70%;
+  }
+  .secContainer .secContent #modalBtn {
+    margin: 0 0 1.3rem 0;
+  }
+  .secContainer .secImage {
+    width: 400px;
+  }
+  .secContainer .reserved {
+    bottom: 15px;
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 770px) and (max-width: 999px) {
+  header .navlogo i {
+    font-size: 1.5rem;
+  }
+  header .grpButton .toggle {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  header .grpButton .openBtn {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  .secContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .secContainer #modal {
+    top: auto;
+    max-width: 90%;
+    height: 35rem;
+    padding: 2rem 2rem 0 2rem;
+  }
+  .secContainer #modal p {
+    display: none;
+  }
+  .secContainer #modal .cv-link {
+    width: 11.5rem;
+    height: 3.5rem;
+    bottom: 2.5rem;
+  }
+  .secContainer #modal .cv-link i {
+    width: 3.2rem;
+    font-size: 1rem;
+  }
+  .secContainer #modal .cv-link:hover i {
+    font-size: 1.5rem;
+  }
+  .secContainer .secContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .secContainer .secContent h1 {
+    font-size: 3rem;
+  }
+  .secContainer .secContent span {
+    font-size: 1rem;
+  }
+  .secContainer .secContent p {
+    font-size: 1rem;
+    width: 70%;
+    margin: 1rem 0 0 0;
+  }
+  .secContainer .secContent #modalBtn {
+    margin: 1rem 0;
+  }
+  .secContainer .secImage {
+    width: 340px;
+  }
+  .secContainer .reserved {
+    bottom: 15px;
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 430px) and (max-width: 769px) {
+  header .navlogo i {
+    font-size: 1.5rem;
+  }
+  header .grpButton .toggle {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  header .grpButton .openBtn {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  .secContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .secContainer #modal {
+    top: auto;
+    max-width: 90%;
+    height: 34rem;
+    padding: 4rem 2rem 0 2rem;
+  }
+  .secContainer #modal p {
+    display: none;
+  }
+  .secContainer #modal .cv-link {
+    width: 11.5rem;
+    height: 3.5rem;
+    bottom: 2.5rem;
+  }
+  .secContainer #modal .cv-link i {
+    width: 3.2rem;
+    font-size: 1rem;
+  }
+  .secContainer #modal .cv-link:hover i {
+    font-size: 1.5rem;
+  }
+  .secContainer .secContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .secContainer .secContent h1 {
+    font-size: 3rem;
+  }
+  .secContainer .secContent span {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .secContainer .secContent p {
+    font-size: 1rem;
+    width: 80%;
+    margin: 1rem 0 0 0;
+  }
+  .secContainer .secContent #modalBtn {
+    margin: 1rem 0;
+  }
+  .secContainer .secImage {
+    width: 370px;
+  }
+  .secContainer .reserved {
+    bottom: 15px;
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 429px) {
+  header .navlogo i {
+    font-size: 1.5rem;
+  }
+  header .grpButton .toggle {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  header .grpButton .openBtn {
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  .secContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem 0 0 0;
+  }
+  .secContainer #modal {
+    top: auto;
+    max-width: 90%;
+    height: 34rem;
+    padding: 3rem 2rem 0 2rem;
+  }
+  .secContainer #modal p {
+    display: none;
+  }
+  .secContainer #modal .cv-link {
+    width: 11.5rem;
+    height: 3.5rem;
+    bottom: 2rem;
+  }
+  .secContainer #modal .cv-link i {
+    width: 3.2rem;
+    font-size: 1rem;
+  }
+  .secContainer #modal .cv-link:hover i {
+    font-size: 1.5rem;
+  }
+  .secContainer .secContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .secContainer .secContent h1 {
+    font-size: 2.1rem;
+  }
+  .secContainer .secContent span {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .secContainer .secContent p {
+    font-size: 1rem;
+    width: 90%;
+    text-align: center;
+  }
+  .secContainer .secContent #modalBtn {
+    margin: 0.5rem 0;
+  }
+  .secContainer .secImage {
+    width: 270px;
+  }
+  .secContainer .reserved {
+    bottom: 1.2rem;
+    font-size: 0.7rem;
+  }
+}/*# sourceMappingURL=style.css.map */

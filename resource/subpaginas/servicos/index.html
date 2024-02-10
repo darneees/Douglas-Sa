@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#231b25">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- import css -->
+        <link rel="stylesheet" href="stile.css">
+        <!-- import icon -->
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <!-- import favicon -->
+        <link rel="shortcut icon" href="../../img/favicon.ico"
+            type="image/x-icon">
+        <!-- import animation -->
+        <link rel="stylesheet" href="https://unpkg.com/transition-style">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <title>Serviços</title>
+    </head>
+    <body>
+
+        <header>
+            <div class="navlogo">
+                <i class="ph-bold ph-qr-code"></i>
+            </div>
+            <nav id="mySidePanel" class="sidePanel">
+                <ul class="navMenu">
+                    <a href="#" class="closedBtn link" onclick="closedNav()">
+                        <i class="ph-bold ph-x"></i>
+                    </a>
+                    <a href="../../../index.html" class="item">
+                        <i class="ph-bold ph-user"></i>
+                        Sobre mim
+                    </a>
+                    <a href="../projetos/index.html" class="item">
+                        <i class="ph-bold ph-folders"></i>
+                        Projetos
+                    </a>
+                    <a href="../habilidades/index.html" class="item">
+                        <i class="ph-bold ph-trophy"></i>
+                        Habilidades
+                    </a>
+                    <a href="../contato/index.html" class="item">
+                        <i class="ph-bold ph-chat-dots"></i>
+                        Contato
+                    </a>
+                </ul>
+            </nav>
+
+            <div class="grpButton">
+                <button class="toggle" onclick="toggleTheme()" >
+                    <i class="ph-bold ph-moon"></i>
+                </button>
+        
+                <button class="openBtn" onclick="openNav()">
+                    <i class="ph-bold ph-text-outdent"></i>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="serContainer">
+                <h1>Serviços</h1>
+
+                <div class="serContent">
+                    <div class="serCard">
+                        <i class="ph-bold ph-devices icon"></i>
+                        <h2>Interface Responsiva</h2>
+
+                        <div class="link">
+                            <i class="ph-bold ph-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="serCard">
+                        <i class="ph-bold ph-layout icon"></i>
+                        <h2>Desenvolvimento<br>web</h2>
+
+                        <div class="link">
+                            <i class="ph-bold ph-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="serCard">
+                        <i class="ph-bold ph-intersect icon"></i>
+                        <h2>Animações</h2>
+
+                        <div class="link">
+                            <i class="ph-bold ph-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="reserved"><strong>© Douglas Sá.</strong> All rigths reserved.</span>
+            </section>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>
