@@ -4,9 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 body {
@@ -35,7 +32,7 @@ body #loader .spinner {
   border: 0.281rem solid #121214;
   border-radius: 100%;
   border-color: rgba(175, 171, 182, 0.1254901961) rgba(0, 0, 0, 0);
-  animation: spinner-e04l1k 1s infinite linear;
+  animation: spin 1s infinite linear;
 }
 body #loader .spinner::before, body #loader .spinner::after {
   content: "";
@@ -78,7 +75,7 @@ header .grpButton {
   border-radius: 0.7rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
   width: 8.5rem;
-  height: 3rem;
+  height: 3.3rem;
 }
 header .grpButton .toggle {
   display: flex;
@@ -486,7 +483,7 @@ header .grpButton .openBtn:hover {
             clip-path: circle(125%);
   }
 }
-@keyframes spinner-e04l1k {
+@keyframes spin {
   100% {
     transform: rotate(1turn);
   }
@@ -784,9 +781,9 @@ header .grpButton .openBtn:hover {
     padding: 1rem 0 0 0;
   }
   .secContainer #modal {
-    top: auto;
+    top: 5%;
     max-width: 90%;
-    height: 34rem;
+    height: 90%;
     padding: 3rem 2rem 0 2rem;
   }
   .secContainer #modal p {

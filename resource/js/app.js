@@ -1,6 +1,6 @@
 // side menu function
 function openNav() {
-    document.getElementById("mySidePanel").style.width = "350px";
+    document.getElementById("mySidePanel").style.width = "300px";
 }
 
 function closedNav() {
@@ -23,22 +23,6 @@ function toggleTheme() {
         themeIcon.classList.add('ph-moon');
     }
 }
-// change image function
-
-const userImage = document.getElementById("userImage");
-
-function changeImage() {
-    const isDarkMode = document.body.classList.contains("darkMode");
-    if (isDarkMode) {
-        userImage.src = "resource/img/darkMode.webp";
-        userImage.alt = "imagem de perfil Dark theme";
-    } else {
-        userImage.src = "resource/img/lightMode.webp";
-        userImage.alt = "imagem de perfil Light theme";
-    }
-}
-
-changeImage();
 
 // open and close modal function
 
