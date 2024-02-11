@@ -49,4 +49,4 @@ function closeModal() {
 
 setTimeout(function () {
     $('#code-loader').fadeToggle();
-}, 1900);
+}, 1600);
