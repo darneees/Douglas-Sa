@@ -52,7 +52,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 10vh;
   position: relative;
@@ -60,13 +60,14 @@ header {
 header .navlogo i {
   color: #121214;
   font-size: 2rem;
+  opacity: 0.5;
 }
 header .grpButton {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   background-color: #121214;
   color: #fafafa;
   border-radius: 0.7rem;
@@ -85,9 +86,6 @@ header .grpButton .toggle {
   outline: none;
   font-size: 1.6rem;
   cursor: pointer;
-  border-radius: 0.7rem;
-  height: 55px;
-  width: 55px;
 }
 header .grpButton .toggle:hover {
   color: rgba(175, 171, 182, 0.6509803922);
@@ -104,9 +102,6 @@ header .grpButton .openBtn {
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 10px;
-  height: 55px;
-  width: 55px;
 }
 header .grpButton .openBtn:hover {
   color: rgba(175, 171, 182, 0.6509803922);
@@ -116,7 +111,7 @@ header .grpButton .openBtn:hover {
 .sidePanel {
   background-color: #202024;
   width: 0;
-  height: 350px;
+  height: 300px;
   top: 0;
   right: 0;
   position: fixed;
@@ -127,24 +122,28 @@ header .grpButton .openBtn:hover {
   border-radius: 0 0 0 1rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
 }
-.sidePanel a {
-  padding: 15px 15px 15px 50px;
+.sidePanel .navMenu {
+  list-style: none;
+}
+.sidePanel .navMenu li a {
+  padding: 1rem 1rem 1rem 4rem;
   text-decoration: none;
   font-size: 1.5rem;
   color: #fafafa;
   display: block;
-  transition: 0.3s;
 }
-.sidePanel a i {
+.sidePanel .navMenu li a i {
   padding: 0 1rem 0 0;
   color: rgba(175, 171, 182, 0.6509803922);
+  font-size: 1.7rem;
 }
-.sidePanel .closedBtn {
+.sidePanel .navMenu li .closedBtn {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  cursor: pointer;
 }
-.sidePanel .closedBtn i {
+.sidePanel .navMenu li .closedBtn i {
   font-size: 2rem;
   color: #fafafa;
 }
@@ -179,16 +178,15 @@ header .grpButton .openBtn:hover {
   color: #AFABB6;
 }
 .darkMode .sidePanel {
-  border: 5px solid rgba(175, 171, 182, 0.1254901961);
   background-color: #202024;
 }
-.darkMode .sidePanel a {
+.darkMode .sidePanel .navMenu li a {
   color: #fafafa;
 }
-.darkMode .sidePanel a:hover, .darkMode .sidePanel a:hover i {
+.darkMode .sidePanel .navMenu li a:hover, .darkMode .sidePanel .navMenu li a:hover i {
   color: #fafafa;
 }
-.darkMode .sidePanel a i {
+.darkMode .sidePanel .navMenu li a i {
   color: rgba(175, 171, 182, 0.6509803922);
 }
 .darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
@@ -238,12 +236,6 @@ header .grpButton .openBtn:hover {
 .darkMode .secContainer .secContent p {
   color: #AFABB6;
 }
-.darkMode .secContainer .secContent #modalBtn {
-  color: #fafafa;
-}
-.darkMode .secContainer .secContent #modalBtn i {
-  color: #fafafa;
-}
 .darkMode .secContainer .reserved {
   color: #fafafa;
   opacity: 0.5;
@@ -269,8 +261,8 @@ header .grpButton .openBtn:hover {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 4;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .secContainer #modal {
   display: flex;
@@ -286,11 +278,16 @@ header .grpButton .openBtn:hover {
   height: 34.5rem;
   z-index: 5;
   border-radius: 1rem;
-  padding: 3rem 2rem 0 2rem;
+  padding: 2rem 2rem 0 2rem;
   gap: 2rem;
   display: none;
 }
 .secContainer #modal h2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.8rem;
   font-size: 1.5rem;
   font-weight: 800;
   color: #202024;
@@ -385,13 +382,17 @@ header .grpButton .openBtn:hover {
   transition: 0.5s;
 }
 .secContainer .secContent {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
   position: relative;
   z-index: 3;
 }
 .secContainer .secContent h1 {
   color: #121214;
   font-size: 5.5rem;
-  margin: 0 0 0.5rem 0;
   font-weight: 800;
 }
 .secContainer .secContent span {
@@ -400,11 +401,10 @@ header .grpButton .openBtn:hover {
   text-transform: uppercase;
 }
 .secContainer .secContent p {
-  margin: 0.9rem 0 0 0;
   font-size: 1.2rem;
   color: #202024;
-  text-indent: 15px;
-  opacity: 0.6;
+  text-indent: 1rem;
+  opacity: 0.7;
   margin: 1rem 0 1rem 0;
 }
 .secContainer .secContent #modalBtn {
@@ -413,17 +413,16 @@ header .grpButton .openBtn:hover {
   flex-direction: row;
   justify-content: space-between;
   background-color: transparent;
-  color: #202024;
+  color: #17b380;
   font-size: 1.2rem;
-  margin: 1rem 0;
   width: 7rem;
   border: none;
   outline: none;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
 .secContainer .secContent #modalBtn i {
-  color: #202024;
+  color: #17b380;
   font-size: 1.5rem;
 }
 .secContainer .secImage {
@@ -516,7 +515,7 @@ header .grpButton .openBtn:hover {
     width: 525px;
   }
   .secContainer .secImage {
-    width: 490px;
+    width: 500px;
   }
   .secContainer .reserved {
     bottom: 2rem;
@@ -581,14 +580,11 @@ header .grpButton .openBtn:hover {
     font-size: 1rem;
     width: 70%;
   }
-  .secContainer .secContent #modalBtn {
-    margin: 0 0 1.3rem 0;
-  }
   .secContainer .secImage {
     width: 400px;
   }
   .secContainer .reserved {
-    bottom: 15px;
+    bottom: 1rem;
     font-size: 0.7rem;
   }
 }
@@ -649,16 +645,12 @@ header .grpButton .openBtn:hover {
   .secContainer .secContent p {
     font-size: 1rem;
     width: 70%;
-    margin: 1rem 0 0 0;
-  }
-  .secContainer .secContent #modalBtn {
-    margin: 1rem 0;
   }
   .secContainer .secImage {
     width: 340px;
   }
   .secContainer .reserved {
-    bottom: 15px;
+    bottom: 1rem;
     font-size: 0.7rem;
   }
 }
@@ -720,16 +712,12 @@ header .grpButton .openBtn:hover {
   .secContainer .secContent p {
     font-size: 1rem;
     width: 80%;
-    margin: 1rem 0 0 0;
-  }
-  .secContainer .secContent #modalBtn {
-    margin: 1rem 0;
   }
   .secContainer .secImage {
     width: 370px;
   }
   .secContainer .reserved {
-    bottom: 15px;
+    bottom: 1rem;
     font-size: 0.7rem;
   }
 }
@@ -793,9 +781,6 @@ header .grpButton .openBtn:hover {
     font-size: 1rem;
     width: 90%;
     text-align: center;
-  }
-  .secContainer .secContent #modalBtn {
-    margin: 0.5rem 0;
   }
   .secContainer .secImage {
     width: 270px;

@@ -16,11 +16,11 @@ function toggleTheme() {
     element.classList.toggle("darkMode");
 
     if (element.classList.contains('darkMode')) {
-        themeIcon.classList.remove('ph-moon');
-        themeIcon.classList.add('ph-sun');
+        themeIcon.classList.remove('iconoir-half-moon');
+        themeIcon.classList.add('iconoir-sun-light');
     } else {
-        themeIcon.classList.remove('ph-sun');
-        themeIcon.classList.add('ph-moon');
+        themeIcon.classList.remove('iconoir-sun-light');
+        themeIcon.classList.add('iconoir-half-moon');
     }
 }
 
@@ -49,4 +49,4 @@ function closeModal() {
 
 setTimeout(function () {
     $('#code-loader').fadeToggle();
-}, 1600);
+}, 1300);

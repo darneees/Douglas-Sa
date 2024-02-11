@@ -8,7 +8,7 @@
         <!-- import css -->
         <link rel="stylesheet" href="resource/css/style.css">
         <!-- import icon -->
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
         <!-- import favicon -->
         <link rel="shortcut icon" href="resource/img/favicon.ico" type="image/x-icon">
     </head>
@@ -16,49 +16,53 @@
     <body>
 
         <article id="code-loader">
-            <span>{</span><span>}</span>
+            <span>{</span>
+            <span>}</span>
         </article>
 
         <header>
             <div class="navlogo">
-                <i class="ph-bold ph-qr-code"></i>
+                <i class="iconoir-code-brackets-square"></i>
             </div>
 
             <nav id="mySidePanel" class="sidePanel">
                 <ul class="navMenu">
-                    <a href="#" class="closedBtn" onclick="closedNav()">
-                        <i class="ph-bold ph-x"></i>
-                    </a>
-                    <a href="resource/subpaginas/servicos/index.html"
+                    <li>
+                        <a class="closedBtn" onclick="closedNav()">
+                            <i class="iconoir-xmark"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resource/subpaginas/servicos/index.html"
                         class="item">
-                        <i class="ph-bold ph-pencil-line"></i>
+                        <i class="iconoir-edit-pencil"></i>
                         Serviços
                     </a>
-                    <a href="resource/subpaginas/projetos/index.html"
+                    </li>
+                    <li>
+                        <a href="resource/subpaginas/projetos/index.html"
                         class="item">
-                        <i class="ph-bold ph-folders"></i>
+                        <i class="iconoir-folder"></i>
                         Projetos
                     </a>
-                    <a href="resource/subpaginas/habilidades/index.html"
+                    </li>
+                    <li>
+                        <a href="resource/subpaginas/habilidades/index.html"
                         class="item">
-                        <i class="ph-bold ph-trophy"></i>
+                        <i class="iconoir-trophy"></i>
                         Habilidades
-                    </a>
-                    <a href="resource/subpaginas/contato/index.html"
-                        class="item">
-                        <i class="ph-bold ph-chat-dots"></i>
-                        Contato
-                    </a>
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <article class="grpButton">
                 <button class="toggle" onclick="toggleTheme()">
-                    <i id="themeIcon" class="ph-bold ph-moon"></i>
+                    <i id="themeIcon" class="iconoir-half-moon"></i>
                 </button>
 
                 <button class="openBtn" onclick="openNav()">
-                    <i class="ph-bold ph-squares-four"></i>
+                    <i class="iconoir-menu-scale"></i>
                 </button>
             </article>
         </header>
@@ -69,29 +73,29 @@
                 <span id="overlay"></span>
 
                 <article id="modal">
-                    <i class="ph-bold ph-x-square" id="closeBtn"></i>
+                    <i class="iconoir-xmark-circle" id="closeBtn"></i>
 
                     <p>Estou sempre em busca de novos desafios e oportunidades de aprendizado.</p>
                     <article>
-                        <h2><i class="ph-bold ph-student"></i> Formação Academica</h2>
+                        <h2><i class="iconoir-medal"></i> Formação Academica</h2>
                         <ul>
-                            <li><i class="ph-bold ph-seal-check"></i>Ensino Médio Completo.</li>
-                            <li><i class="ph-bold ph-seal" id="load"></i>Graduando em Ciência da Computação - em andamento.</li>
+                            <li><i class="iconoir-badge-check"></i>Ensino Médio Completo.</li>
+                            <li><i class="iconoir-circle" id="load"></i>Graduando em Ciência da Computação - em andamento.</li>
                         </ul>
                     </article>
 
                     <article>
-                        <h2><i class="ph-bold ph-suitcase-simple"></i> Experiências</h2>
+                        <h2><i class="iconoir-suitcase"></i> Experiências</h2>
                         <ul>
-                            <li><i class="ph-bold ph-seal" id="load"></i>Estagiário na área de desenvolvimento web ( Trabalho atual ).</li>
-                            <li><i class="ph-bold ph-seal" id="load"></i></i>Estagiário na área de suporte técnico ( Trabalho atual ).</li>
+                            <li><i class="iconoir-badge-check"></i>Estagiário na área de desenvolvimento web ( Trabalho atual ).</li>
+                            <li><i class="iconoir-badge-check"></i></i>Estagiário na área de suporte técnico ( Trabalho atual ).</li>
                         </ul>
                     </article>
 
                     <a href="resource/img/doc/" download
                         class="cv-link">
                         currículo
-                        <i class="ph-bold ph-download"></i>
+                        <i class="iconoir-import"></i>
                     </a>
                 </article>
 
@@ -102,7 +106,7 @@
                         e estou no 7° semestre. Possuo 1 ano de experiência em desenvolvimento web.</p>
                     <button id="modalBtn">
                         ver mais
-                        <i class="ph-bold ph-plus-circle"></i>
+                        <i class="iconoir-plus-circle-solid"></i>
                     </button>
                 </article>
 
