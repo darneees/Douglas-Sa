@@ -48,5 +48,5 @@ function closeModal() {
 // loader function
 
 setTimeout(function () {
-    $('#loader').fadeToggle();
-}, 1200);
+    $('#code-loader').fadeToggle();
+}, 1900);

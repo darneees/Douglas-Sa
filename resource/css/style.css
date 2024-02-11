@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -14,41 +17,32 @@ body {
   background-position: -5px -5px;
   overflow: hidden;
 }
-body #loader {
+body #code-loader {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  gap: 0.5rem;
   background-color: #17171A;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 6;
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 100px;
 }
-body #loader .spinner {
-  width: 4rem;
-  height: 4rem;
-  display: grid;
-  border: 0.281rem solid #121214;
-  border-radius: 100%;
-  border-color: rgba(175, 171, 182, 0.1254901961) rgba(0, 0, 0, 0);
-  animation: spin 1s infinite linear;
+body #code-loader span {
+  display: inline-block;
+  animation: pulse_414 0.4s alternate infinite ease-in-out;
+  opacity: 0.4;
 }
-body #loader .spinner::before, body #loader .spinner::after {
-  content: "";
-  grid-area: 1/1;
-  margin: 0.15rem;
-  border: inherit;
-  border-radius: 100%;
+body #code-loader span:nth-child(odd) {
+  animation-delay: 0.4s;
+  opacity: 1;
 }
-body #loader .spinner::before {
-  border-color: #fafafa rgba(0, 0, 0, 0);
-  animation: inherit;
-  animation-duration: 0.5s;
-  animation-direction: reverse;
-}
-body #loader .spinner::after {
-  margin: 0.55rem;
+body #code-loader span:nth-child(even) {
+  opacity: 1;
 }
 
 header {
@@ -442,24 +436,11 @@ header .grpButton .openBtn:hover {
 .secContainer .reserved {
   position: absolute;
   font-weight: 400;
-  bottom: 20px;
   left: auto;
   font-size: 1rem;
   opacity: 1;
   color: #202024;
   z-index: 2;
-  animation: fadeInUp;
-  animation-duration: 2s;
-}
-.secContainer .about__wave {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../img/wave__lightTheme.svg) bottom center no-repeat;
-  background-size: cover;
-  z-index: 1;
-  opacity: 0.1;
 }
 
 @keyframes ocean {
@@ -473,19 +454,10 @@ header .grpButton .openBtn:hover {
     border-radius: 100% 60% 60% 100%/100% 100% 60% 60%;
   }
 }
-@keyframes circle-in-center {
-  from {
-    -webkit-clip-path: circle(0%);
-            clip-path: circle(0%);
-  }
+@keyframes pulse_414 {
   to {
-    -webkit-clip-path: circle(125%);
-            clip-path: circle(125%);
-  }
-}
-@keyframes spin {
-  100% {
-    transform: rotate(1turn);
+    transform: scale(0.8);
+    opacity: 0.5;
   }
 }
 @media (min-width: 2000px) {
@@ -506,7 +478,7 @@ header .grpButton .openBtn:hover {
     width: 550px;
   }
   .secContainer .reserved {
-    bottom: 1.2rem;
+    bottom: 2rem;
     font-size: 1rem;
   }
 }
@@ -544,7 +516,7 @@ header .grpButton .openBtn:hover {
     width: 490px;
   }
   .secContainer .reserved {
-    bottom: 1.2rem;
+    bottom: 2rem;
     font-size: 1rem;
   }
 }
@@ -784,7 +756,7 @@ header .grpButton .openBtn:hover {
     top: 5%;
     max-width: 90%;
     height: 90%;
-    padding: 3rem 2rem 0 2rem;
+    padding: 1.5rem 2rem 0 2rem;
   }
   .secContainer #modal p {
     display: none;

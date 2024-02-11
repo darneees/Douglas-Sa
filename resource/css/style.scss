@@ -8,7 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Manrope", sans-serif;
-    // user-select: none;
+    user-select: none;
 }
 
 body {
@@ -19,45 +19,33 @@ body {
     background-position: -5px -5px;
     overflow: hidden;
 
-    #loader {
+    #code-loader {
         @include align (center, row, center);
+        gap: .5rem;
         background-color: $bg-dark-20;
         width: 100%;
         height: 100%;
         position: fixed;
         z-index: 6;
+        color: $white;
+        font-weight: bold;
+        font-size: 100px;
 
-        .spinner {
-            width: 4rem;
-            height: 4rem;
-            display: grid;
-            border: 0.281rem solid $bg-dark-10;
-            border-radius: 100%;
-            border-color: $bg-gray-30 #00000000;
-            animation: spin 1s infinite linear;
+        span {
+            display: inline-block;
+            animation: pulse_414 0.4s alternate infinite ease-in-out;
+            opacity: 0.4;
 
-            &::before,
-            &::after {
-                content: "";
-                grid-area: 1/1;
-                margin: 0.15rem;
-                border: inherit;
-                border-radius: 100%;
+            &:nth-child(odd) {
+                animation-delay: 0.4s;
+                opacity: 1;
             }
 
-            &::before {
-                border-color: $white #0000;
-                animation: inherit;
-                animation-duration: 0.5s;
-                animation-direction: reverse;
-            }
+            &:nth-child(even) {
+                opacity: 1;
 
-            &::after {
-                margin: 0.55rem;
             }
         }
-
-
     }
 }
 
@@ -94,7 +82,7 @@ header {
             border-radius: .7rem;
             height: 55px;
             width: 55px;
-            
+
             &:hover {
                 color: $bg-gray-20;
                 transition: .5s;
@@ -154,7 +142,7 @@ header {
         position: absolute;
         top: 1rem;
         right: 1rem;
-        
+
         i {
             font-size: 2rem;
             color: $white;
@@ -496,27 +484,11 @@ header {
     .reserved {
         position: absolute;
         font-weight: 400;
-        bottom: 20px;
         left: auto;
         font-size: 1rem;
         opacity: 1;
         color: $bg-dark-30;
         z-index: 2;
-
-        animation: fadeInUp;
-        animation-duration: 2s;
-    }
-
-    .about__wave {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background: url(../img/wave__lightTheme.svg) bottom center no-repeat;
-        background-size: cover;
-        z-index: 1;
-        opacity: .1;
-
     }
 }
 
@@ -541,19 +513,10 @@ header {
     }
 }
 
-@keyframes circle-in-center {
-    from {
-        clip-path: circle(0%);
-    }
-
+@keyframes pulse_414 {
     to {
-        clip-path: circle(125%);
-    }
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(1turn);
+        transform: scale(0.8);
+        opacity: 0.5;
     }
 }
 
@@ -580,7 +543,7 @@ header {
         }
 
         .reserved {
-            bottom: 1.2rem;
+            bottom: 2rem;
             font-size: 1rem;
         }
     }
@@ -631,7 +594,7 @@ header {
         }
 
         .reserved {
-            bottom: 1.2rem;
+            bottom: 2rem;
             font-size: 1rem;
         }
     }
@@ -922,7 +885,7 @@ header {
             top: 5%;
             max-width: 90%;
             height: 90%;
-            padding: 3rem 2rem 0 2rem;
+            padding: 1.5rem 2rem 0 2rem;
 
             p {
                 display: none;
