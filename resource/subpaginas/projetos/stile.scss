@@ -1,116 +1,175 @@
 @import 'varibles',
         'funtion';
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 * {
     @include reset();
-    font-family: 'Sora', sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: $bg-image-10;
+    background-size: 40px 40px;
+    background-position: -5px -5px;
+
+    #code-loader {
+        @include align (center, row, center);
+        gap: .5rem;
+        background-color: $bg-dark-20;
+        background-image: $bg-image-20;
+        background-size: 40px 40px;
+        background-position: -5px -5px;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 6;
+        color: $white;
+        font-weight: bold;
+        font-size: 100px;
+
+        span {
+            display: inline-block;
+            animation: pulse_414 0.4s alternate infinite ease-in-out;
+            opacity: 0.4;
+
+            &:nth-child(odd) {
+                animation-delay: 0.4s;
+                opacity: 1;
+            }
+
+            &:nth-child(even) {
+                opacity: 1;
+
+            }
+        }
+
+        i {
+            text-transform: uppercase;
+            font-size: 3rem;
+            color: $white;
+            font-weight: 700;
+            opacity: .4;
+        }
+    }
+}
+
 #header {
-    @include align (center, row, space-around);
+    @include align (center, row, space-evenly);
     width: 100%;
     height: 15vh;
 
-    animation: fadeInDown;
-    animation-duration: 1.5s;
-
     .navlogo i {
-        color: $brown;
+        color: $bg-dark-10;
         font-size: 2rem;
+        opacity: .5;
     }
 
     .grpButton {
         @include align (center, row, center);
-        gap: 1rem;
+        gap: 2rem;
+        background-color: $bg-dark-10;
+        color: $white;
+        border-radius: .7rem;
+        box-shadow: $shadow;
+        width: 8.5rem;
+        height: 3.3rem;
 
         .toggle {
             @include align (center, row, center);
             background-color: transparent;
-            color: $brown;
+            color: $white;
+            border: none;
+            outline: none;
             font-size: 1.6rem;
-            border: 3px solid $brown;
-            border-radius: .8rem;
-            height: 55px;
-            width: 55px;
             cursor: pointer;
 
             &:hover {
-                background-color: $brown;
-                border: none;
-                color: $white;
-                transition: .3s;
+                color: $bg-gray-20;
+                transition: .5s;
             }
         }
 
         .openBtn {
             @include align (center, row, center);
-            background-color: $brown;
+            background-color: transparent;
             color: $white;
             font-size: 1.6rem;
             border: none;
-            border-radius: .8rem;
-            height: 55px;
-            width: 55px;
+            outline: none;
             cursor: pointer;
 
+
             &:hover {
-                background-color: $white;
-                border: 3px solid $brown;
-                color: $brown;
-                transition: .3s;
+                color: $bg-gray-20;
+                transition: .5s;
             }
         }
     }
 }
 
-
 .sidePanel {
+    background-color: $bg-dark-30;
     width: 0;
-    height: 350px;
+    height: 300px;
     top: 0;
     right: 0;
     position: fixed;
-    background-color: $brown;
     overflow-x: hidden;
     transition: 0.5s;
     padding: 60px 0 0 0;
-    z-index: 2;
+    z-index: 3;
+    border-radius: 0 0 0 1rem;
+    box-shadow: $shadow;
 
-    a {
-        padding: 15px 15px 15px 50px;
-        text-decoration: none;
-        font-size: 1.5rem;
-        color: $white;
-        display: block;
-        transition: 0.3s;
+    .navMenu {
+        list-style: none;
 
-        i {
-            padding: 0 1rem 0 0;
-            color: $white;
+        li {
+            a {
+                padding: 1rem 1rem 1rem 4rem;
+                text-decoration: none;
+                font-size: 1.5rem;
+                color: $white;
+                display: block;
+
+                i {
+                    padding: 0 1rem 0 0;
+                    color: $bg-gray-20;
+                    font-size: 1.7rem;
+                }
+            }
+
+            .closedBtn {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                cursor: pointer;
+
+                i {
+                    font-size: 2rem;
+                    color: $white;
+                }
+            }
         }
     }
-
-    .closedBtn {
-        position: absolute;
-        opacity: 1;
-        top: 10px;
-        right: 25px;
-        font: 2rem;
-    }
 }
-
 .sidePanel:has(.item:hover) .item:not(:hover) {
     opacity: 0.1;
 }
 
 .darkMode {
-    background-color: $brown;
+    background-color: $bg-dark-20;
+    background-image: $bg-image-20;
+    background-size: 40px 40px;
+    background-position: -5px -5px;
     transition: 0.5s;
 
     #header {
@@ -119,71 +178,66 @@ html {
         }
 
         .grpButton {
+            background-color: $white;
+    
             .toggle {
-                color: $white;
-                border: 3px solid $white;
-
+                color: $bg-dark-10;
+    
                 &:hover {
-                    background-color: $beige;
-                    border: none;
-                    color: $white;
+                    color: $bg-gray-10;
                 }
             }
-
+    
             .openBtn {
-                background-color: $white;
-                color: $brown;
-
+                color: $bg-dark-10;
+    
                 &:hover {
-                    background-color: $beige;
-                    color: $white;
-                    border: none;
+                    color: $bg-gray-10;
                 }
             }
-
         }
     }
 
     .sidePanel {
-        background-color: $beige;
+        background-color: $bg-dark-30;
 
-        a {
-            color: $brown;
+        .navMenu {
+            li {
+                a {
+                    color: $white;
 
-            &:hover ,
-            &:hover i {
-                color: $white;
-            }
+                    &:hover,
+                    &:hover i {
+                        color: $white;
+                    }
 
-            i {
-                color: $brown;
+                    i {
+                        color: $bg-gray-20;
+                    }
+                }
             }
         }
     }
 
     .sidePanel:has(.item:hover) .item:not(:hover) {
-        opacity: 0.3;
+        opacity: 0.15;
     }
 
     .container {
 
         #myBtn {
-            background-color: $beige;
-            color: $white;
-        }
-
-        #title {
+            background-color: $bg-dark-30;
             color: $white;
         }
 
         .card {
             .open-btn {
-                background-color: $beige;
+                background-color: $bg-dark-30;
                 color: $white;
             }
 
             .popup {
-                background-color: $beige;
+                background-color: $bg-dark-30;
                 color: $white;
 
                 .close-btn {
@@ -193,19 +247,18 @@ html {
 
                 .content {
                     h2 {
-                        color: $brown;
+                        color: $white;
                     }
 
                     p {
-                        color: $brown;
-                        opacity: .8;
+                        color: $bg-gray-10;
                     }
                 }
 
                 .actions {
                     a {
                         background-color: $white;
-                        color: $brown;
+                        color: $bg-dark-10;
 
                         i {
                             color: $link;
@@ -215,24 +268,24 @@ html {
             }
 
             .title {
-                background-color: $beige;
+                background-color: $bg-dark-30;
                 color: $white;
             }
         }
 
         .more {
             background-color: transparent;
-            border: 3px solid $white;
+            border: .2rem solid $white;
             color: $white;
     
             i {
-                background-color: $white;
-                color: $brown;
+                background-color: $link;
+                color: $white;
             }
     
             &:hover {
                 i {
-                    background-color: $beige;
+                    background-color: $link;
                     color: $white;
                 }
             }
@@ -258,9 +311,8 @@ html {
         $width: 3.5rem;
         $height: 3.5rem;
 
-
         display: none;
-        background-color: $brown;
+        background-color: $bg-dark-10;
         color: $white;
         position: fixed;
         height: $height;
@@ -276,16 +328,10 @@ html {
         box-shadow: $shadow;
 
         &:hover {
-            background-color: $opcity;
+            background-color: $bg-gray-20;
+            color: $bg-dark-10;
             transition: .3s ease-in-out;
         }
-    }
-
-    #title {
-        color: $brown;
-
-        animation: fadeInDown;
-        animation-duration: 1.8s;
     }
 
     .card {
@@ -293,10 +339,8 @@ html {
         width: 320px;
         height: 320px;
         border-radius: 1.5rem;
-        border: 1px solid $opcity;
+        box-shadow: $shadow;
         z-index: 2;
-
-        animation: 2s cubic-bezier(.25, 1, .30, 1) square-in-center both;
 
         img {
             width: 100%;
@@ -307,6 +351,8 @@ html {
             object-fit: cover;
             z-index: -1;
             border-radius: 1.5rem;
+            filter: blur(2px);
+            opacity: .9;
         }
 
         .open-btn {
@@ -316,7 +362,7 @@ html {
             top: 1rem;
             left: 1rem;
             font-size: 1.5rem;
-            background-color: $brown;
+            background-color: $bg-dark-10;
             color: $white;
             padding: 1rem;
             border-radius: 1rem .5rem .5rem .5rem;
@@ -326,14 +372,14 @@ html {
 
         .popup {
             display: none;
-            background-color: $brown;
+            background-color: $bg-dark-10;
             position: absolute;
             left: 0;
             top: 0;
             z-index: 3;
             width: 320px;
             height: 320px;
-            padding: 2rem 2rem 0 2rem;
+            padding: 3.5rem 2rem 0 2rem;
             border-radius: 1.5rem;
 
             .close-btn {
@@ -381,7 +427,7 @@ html {
                 a {
                     @include align (center, row, space-between);
                     background-color: $white;
-                    color: $brown;
+                    color: $bg-dark-10;
                     min-height: 3rem;
                     width: 100%;
                     padding: 0 1rem 0 1rem;
@@ -397,7 +443,7 @@ html {
         }
 
         .title {
-            background-color: $brown;
+            background-color: $bg-dark-10;
             color: $white;
             box-shadow: $shadow;
             position: absolute;
@@ -416,30 +462,27 @@ html {
 
     .more {
         @include align (center, row, flex-start);
-        background-color: $brown;
+        border: .2rem solid $bg-dark-10;
+        color: $bg-dark-10;
         text-decoration: none;
-        color: $white;
-        width: 11.9rem;
+        width: 7.5rem;
         height: 3rem;
-        gap: .5rem;
+        font-weight: 700;
+        text-transform: uppercase;
         cursor: pointer;
         position: relative;
         padding: 0 0 0 1rem;
         border-radius: .5rem;
-
-
-        animation: 2s cubic-bezier(.25, 1, .30, 1) square-in-center both;
         
         i {
             @include align (center, row, center);
-            background-color: $white;
-            border: 3px solid $brown;
-            color: $brown;
+            background-color: $bg-dark-10;
+            color: $white;
             font-size: 1.2rem;
-            height: 100%;
+            height: 90%;
             width: 3rem;
             position: absolute;
-            right: 0;
+            right: .15rem;
             border-radius: .5rem;
         }
 
@@ -447,7 +490,7 @@ html {
             i {
                 transition: .4s ease-in-out;
                 font-size: 1.5rem;
-                width: 100%;
+                width: 96%;
             }
         }
     }
@@ -455,41 +498,49 @@ html {
     .reserved {
         position: absolute;
         font-weight: 400;
-        bottom: 20px;
+        bottom: 2rem;
         left: auto;
         font-size: 1rem;
-        color: $brown;
-
-        animation: fadeInUp;
-        animation-duration: 1.5s;
+        color: $bg-dark-10;
     }
 }
 
 // scrollbar
 
 ::-webkit-scrollbar {
-    background-color: $brown;
+    background-color: $white;
     width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $white;
+    background-color: $bg-dark-10;
     width: auto;
     height: auto;
 
 }
+
+// loader animation
+
+@keyframes pulse_414 {
+    to {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+// selection
+
+::selection {
+    background-color: $link;
+    color: $white;
+}
+
 
 // responsive
 
 @media (min-width: 1000px) and (max-width: 1999px) {
     .container {
         @include align (center, row, center);
-
-        #title {
-            position: absolute;
-            top: -2rem;
-            font-size: 2rem;
-        }
     }
 }
 
@@ -498,22 +549,14 @@ html {
         @include align (center, column, center);
         height: auto;
         padding: 0 0 5rem 0;
-
-        #title {
-            font-size: 2.3rem;
-        }
     }
 }
 
-@media (min-width: 399px) and (max-width: 769px) {
+@media (min-width: 430px) and (max-width: 769px) {
     .container {
         @include align (center, column, center);
         height: auto;
         padding: 0 0 5rem 0;
-
-        #title {
-            font-size: 2.3rem;
-        }
 
         .card {
             width: 300px;
@@ -527,15 +570,11 @@ html {
     }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 429px) {
     .container {
         @include align (center, column, center);
         height: auto;
         padding: 0 0 5rem 0;
-
-        #title {
-            font-size: 2.1rem;
-        }
 
         .card {
             width: 300px;
@@ -544,6 +583,7 @@ html {
             .popup {
                 width: 300px;
                 height: 300px;
+                padding: 2.5rem 2rem 0 2rem;
             }
         }
     }

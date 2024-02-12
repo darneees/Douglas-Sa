@@ -4,9 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 body {
@@ -462,6 +459,15 @@ header .grpButton .openBtn:hover {
     opacity: 0.5;
   }
 }
+::-moz-selection {
+  background-color: #17b380;
+  color: #fafafa;
+}
+::selection {
+  background-color: #17b380;
+  color: #fafafa;
+}
+
 @media (min-width: 2000px) {
   .secContainer {
     display: flex;

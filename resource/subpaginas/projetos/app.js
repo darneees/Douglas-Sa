@@ -10,8 +10,18 @@ function closedNav() {
 // toggle theme function
 
 function toggleTheme() {
-    var element = document.body;
-    element.classList.toggle("darkMode");
+  let element = document.body;
+  let themeIcon = document.getElementById('themeIcon');
+
+  element.classList.toggle("darkMode");
+
+  if (element.classList.contains('darkMode')) {
+      themeIcon.classList.remove('iconoir-half-moon');
+      themeIcon.classList.add('iconoir-sun-light');
+  } else {
+      themeIcon.classList.remove('iconoir-sun-light');
+      themeIcon.classList.add('iconoir-half-moon');
+  }
 }
 
 // popup project
@@ -49,3 +59,9 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// loader function
+
+setTimeout(function () {
+  $('#code-loader').fadeToggle();
+}, 1300);

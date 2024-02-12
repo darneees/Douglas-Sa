@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,33 +6,84 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  font-family: "Sora", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(12, 12, 12, 0.088) 2px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -5px -5px;
+}
+body #code-loader {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #17171A;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -5px -5px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 6;
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 100px;
+}
+body #code-loader span {
+  display: inline-block;
+  animation: pulse_414 0.4s alternate infinite ease-in-out;
+  opacity: 0.4;
+}
+body #code-loader span:nth-child(odd) {
+  animation-delay: 0.4s;
+  opacity: 1;
+}
+body #code-loader span:nth-child(even) {
+  opacity: 1;
+}
+body #code-loader i {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #fafafa;
+  font-weight: 700;
+  opacity: 0.4;
+}
+
 #header {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 15vh;
-  animation: fadeInDown;
-  animation-duration: 1.5s;
 }
 #header .navlogo i {
-  color: #151116;
+  color: #121214;
   font-size: 2rem;
+  opacity: 0.5;
 }
 #header .grpButton {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+  background-color: #121214;
+  color: #fafafa;
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
+  width: 8.5rem;
+  height: 3.3rem;
 }
 #header .grpButton .toggle {
   display: flex;
@@ -40,71 +91,71 @@ html {
   flex-direction: row;
   justify-content: center;
   background-color: transparent;
-  color: #151116;
+  color: #fafafa;
+  border: none;
+  outline: none;
   font-size: 1.6rem;
-  border: 3px solid #151116;
-  border-radius: 0.8rem;
-  height: 55px;
-  width: 55px;
   cursor: pointer;
 }
 #header .grpButton .toggle:hover {
-  background-color: #151116;
-  border: none;
-  color: #FCF7FF;
-  transition: 0.3s;
+  color: rgba(175, 171, 182, 0.6509803922);
+  transition: 0.5s;
 }
 #header .grpButton .openBtn {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  background-color: #151116;
-  color: #FCF7FF;
+  background-color: transparent;
+  color: #fafafa;
   font-size: 1.6rem;
   border: none;
-  border-radius: 0.8rem;
-  height: 55px;
-  width: 55px;
+  outline: none;
   cursor: pointer;
 }
 #header .grpButton .openBtn:hover {
-  background-color: #FCF7FF;
-  border: 3px solid #151116;
-  color: #151116;
-  transition: 0.3s;
+  color: rgba(175, 171, 182, 0.6509803922);
+  transition: 0.5s;
 }
 
 .sidePanel {
+  background-color: #202024;
   width: 0;
-  height: 350px;
+  height: 300px;
   top: 0;
   right: 0;
   position: fixed;
-  background-color: #151116;
   overflow-x: hidden;
   transition: 0.5s;
   padding: 60px 0 0 0;
-  z-index: 2;
+  z-index: 3;
+  border-radius: 0 0 0 1rem;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
 }
-.sidePanel a {
-  padding: 15px 15px 15px 50px;
+.sidePanel .navMenu {
+  list-style: none;
+}
+.sidePanel .navMenu li a {
+  padding: 1rem 1rem 1rem 4rem;
   text-decoration: none;
   font-size: 1.5rem;
-  color: #FCF7FF;
+  color: #fafafa;
   display: block;
-  transition: 0.3s;
 }
-.sidePanel a i {
+.sidePanel .navMenu li a i {
   padding: 0 1rem 0 0;
-  color: #FCF7FF;
+  color: rgba(175, 171, 182, 0.6509803922);
+  font-size: 1.7rem;
 }
-.sidePanel .closedBtn {
+.sidePanel .navMenu li .closedBtn {
   position: absolute;
-  opacity: 1;
-  top: 10px;
-  right: 25px;
-  font: 2rem;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.sidePanel .navMenu li .closedBtn i {
+  font-size: 2rem;
+  color: #fafafa;
 }
 
 .sidePanel:has(.item:hover) .item:not(:hover) {
@@ -112,97 +163,93 @@ html {
 }
 
 .darkMode {
-  background-color: #151116;
+  background-color: #17171A;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -5px -5px;
   transition: 0.5s;
 }
 .darkMode #header .navlogo i {
-  color: #FCF7FF;
+  color: #fafafa;
+}
+.darkMode #header .grpButton {
+  background-color: #fafafa;
 }
 .darkMode #header .grpButton .toggle {
-  color: #FCF7FF;
-  border: 3px solid #FCF7FF;
+  color: #121214;
 }
 .darkMode #header .grpButton .toggle:hover {
-  background-color: #d48c80;
-  border: none;
-  color: #FCF7FF;
+  color: #AFABB6;
 }
 .darkMode #header .grpButton .openBtn {
-  background-color: #FCF7FF;
-  color: #151116;
+  color: #121214;
 }
 .darkMode #header .grpButton .openBtn:hover {
-  background-color: #d48c80;
-  color: #FCF7FF;
-  border: none;
+  color: #AFABB6;
 }
 .darkMode .sidePanel {
-  background-color: #d48c80;
+  background-color: #202024;
 }
-.darkMode .sidePanel a {
-  color: #151116;
+.darkMode .sidePanel .navMenu li a {
+  color: #fafafa;
 }
-.darkMode .sidePanel a:hover, .darkMode .sidePanel a:hover i {
-  color: #FCF7FF;
+.darkMode .sidePanel .navMenu li a:hover, .darkMode .sidePanel .navMenu li a:hover i {
+  color: #fafafa;
 }
-.darkMode .sidePanel a i {
-  color: #151116;
+.darkMode .sidePanel .navMenu li a i {
+  color: rgba(175, 171, 182, 0.6509803922);
 }
 .darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
-  opacity: 0.3;
+  opacity: 0.15;
 }
 .darkMode .container #myBtn {
-  background-color: #d48c80;
-  color: #FCF7FF;
-}
-.darkMode .container #title {
-  color: #FCF7FF;
+  background-color: #202024;
+  color: #fafafa;
 }
 .darkMode .container .card .open-btn {
-  background-color: #d48c80;
-  color: #FCF7FF;
+  background-color: #202024;
+  color: #fafafa;
 }
 .darkMode .container .card .popup {
-  background-color: #d48c80;
-  color: #FCF7FF;
+  background-color: #202024;
+  color: #fafafa;
 }
 .darkMode .container .card .popup .close-btn {
-  color: #FCF7FF;
+  color: #fafafa;
   opacity: 1;
 }
 .darkMode .container .card .popup .content h2 {
-  color: #151116;
+  color: #fafafa;
 }
 .darkMode .container .card .popup .content p {
-  color: #151116;
-  opacity: 0.8;
+  color: #AFABB6;
 }
 .darkMode .container .card .popup .actions a {
-  background-color: #FCF7FF;
-  color: #151116;
+  background-color: #fafafa;
+  color: #121214;
 }
 .darkMode .container .card .popup .actions a i {
   color: #17b380;
 }
 .darkMode .container .card .title {
-  background-color: #d48c80;
-  color: #FCF7FF;
+  background-color: #202024;
+  color: #fafafa;
 }
 .darkMode .container .more {
   background-color: transparent;
-  border: 3px solid #FCF7FF;
-  color: #FCF7FF;
+  border: 0.2rem solid #fafafa;
+  color: #fafafa;
 }
 .darkMode .container .more i {
-  background-color: #FCF7FF;
-  color: #151116;
+  background-color: #17b380;
+  color: #fafafa;
 }
 .darkMode .container .more:hover i {
-  background-color: #d48c80;
-  color: #FCF7FF;
+  background-color: #17b380;
+  color: #fafafa;
 }
 .darkMode .container .reserved {
-  color: #FCF7FF;
+  color: #fafafa;
 }
 
 .container {
@@ -220,8 +267,8 @@ html {
 }
 .container #myBtn {
   display: none;
-  background-color: #151116;
-  color: #FCF7FF;
+  background-color: #121214;
+  color: #fafafa;
   position: fixed;
   height: 3.5rem;
   width: 3.5rem;
@@ -233,25 +280,20 @@ html {
   outline: none;
   cursor: pointer;
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
 }
 .container #myBtn:hover {
-  background-color: rgba(68, 68, 68, 0.3647058824);
+  background-color: rgba(175, 171, 182, 0.6509803922);
+  color: #121214;
   transition: 0.3s ease-in-out;
-}
-.container #title {
-  color: #151116;
-  animation: fadeInDown;
-  animation-duration: 1.8s;
 }
 .container .card {
   position: relative;
   width: 320px;
   height: 320px;
   border-radius: 1.5rem;
-  border: 1px solid rgba(68, 68, 68, 0.3647058824);
+  box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
   z-index: 2;
-  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) square-in-center both;
 }
 .container .card img {
   width: 100%;
@@ -263,6 +305,8 @@ html {
      object-fit: cover;
   z-index: -1;
   border-radius: 1.5rem;
+  filter: blur(2px);
+  opacity: 0.9;
 }
 .container .card .open-btn {
   position: absolute;
@@ -271,28 +315,28 @@ html {
   top: 1rem;
   left: 1rem;
   font-size: 1.5rem;
-  background-color: #151116;
-  color: #FCF7FF;
+  background-color: #121214;
+  color: #fafafa;
   padding: 1rem;
   border-radius: 1rem 0.5rem 0.5rem 0.5rem;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
 }
 .container .card .popup {
   display: none;
-  background-color: #151116;
+  background-color: #121214;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 3;
   width: 320px;
   height: 320px;
-  padding: 2rem 2rem 0 2rem;
+  padding: 3.5rem 2rem 0 2rem;
   border-radius: 1.5rem;
 }
 .container .card .popup .close-btn {
   position: absolute;
-  color: #FCF7FF;
+  color: #fafafa;
   opacity: 0.7;
   right: 1rem;
   top: 1rem;
@@ -308,13 +352,13 @@ html {
   margin: 0 0 0.5rem 0;
 }
 .container .card .popup .content h2 {
-  color: #FCF7FF;
+  color: #fafafa;
   font-size: 1.3rem;
   font-weight: 600;
   width: 90%;
 }
 .container .card .popup .content p {
-  color: #FCF7FF;
+  color: #fafafa;
   font-weight: 300;
   font-size: 1rem;
   opacity: 0.5;
@@ -336,8 +380,8 @@ html {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #FCF7FF;
-  color: #151116;
+  background-color: #fafafa;
+  color: #121214;
   min-height: 3rem;
   width: 100%;
   padding: 0 1rem 0 1rem;
@@ -349,9 +393,9 @@ html {
   font-size: 1.5rem;
 }
 .container .card .title {
-  background-color: #151116;
-  color: #FCF7FF;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
+  background-color: #121214;
+  color: #fafafa;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
   position: absolute;
   letter-spacing: 0.1rem;
   bottom: 1rem;
@@ -369,58 +413,70 @@ html {
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: #151116;
+  border: 0.2rem solid #121214;
+  color: #121214;
   text-decoration: none;
-  color: #FCF7FF;
-  width: 11.9rem;
+  width: 7.5rem;
   height: 3rem;
-  gap: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
   cursor: pointer;
   position: relative;
   padding: 0 0 0 1rem;
   border-radius: 0.5rem;
-  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) square-in-center both;
 }
 .container .more i {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  background-color: #FCF7FF;
-  border: 3px solid #151116;
-  color: #151116;
+  background-color: #121214;
+  color: #fafafa;
   font-size: 1.2rem;
-  height: 100%;
+  height: 90%;
   width: 3rem;
   position: absolute;
-  right: 0;
+  right: 0.15rem;
   border-radius: 0.5rem;
 }
 .container .more:hover i {
   transition: 0.4s ease-in-out;
   font-size: 1.5rem;
-  width: 100%;
+  width: 96%;
 }
 .container .reserved {
   position: absolute;
   font-weight: 400;
-  bottom: 20px;
+  bottom: 2rem;
   left: auto;
   font-size: 1rem;
-  color: #151116;
-  animation: fadeInUp;
-  animation-duration: 1.5s;
+  color: #121214;
 }
 
 ::-webkit-scrollbar {
-  background-color: #151116;
+  background-color: #fafafa;
   width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #FCF7FF;
+  background-color: #121214;
   width: auto;
   height: auto;
+}
+
+@keyframes pulse_414 {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+::-moz-selection {
+  background-color: #17b380;
+  color: #fafafa;
+}
+::selection {
+  background-color: #17b380;
+  color: #fafafa;
 }
 
 @media (min-width: 1000px) and (max-width: 1999px) {
@@ -429,11 +485,6 @@ html {
     align-items: center;
     flex-direction: row;
     justify-content: center;
-  }
-  .container #title {
-    position: absolute;
-    top: -2rem;
-    font-size: 2rem;
   }
 }
 @media (min-width: 770px) and (max-width: 999px) {
@@ -445,11 +496,8 @@ html {
     height: auto;
     padding: 0 0 5rem 0;
   }
-  .container #title {
-    font-size: 2.3rem;
-  }
 }
-@media (min-width: 399px) and (max-width: 769px) {
+@media (min-width: 430px) and (max-width: 769px) {
   .container {
     display: flex;
     align-items: center;
@@ -457,9 +505,6 @@ html {
     justify-content: center;
     height: auto;
     padding: 0 0 5rem 0;
-  }
-  .container #title {
-    font-size: 2.3rem;
   }
   .container .card {
     width: 300px;
@@ -470,7 +515,7 @@ html {
     height: 300px;
   }
 }
-@media (max-width: 399px) {
+@media (max-width: 429px) {
   .container {
     display: flex;
     align-items: center;
@@ -479,9 +524,6 @@ html {
     height: auto;
     padding: 0 0 5rem 0;
   }
-  .container #title {
-    font-size: 2.1rem;
-  }
   .container .card {
     width: 300px;
     height: 300px;
@@ -489,5 +531,6 @@ html {
   .container .card .popup {
     width: 300px;
     height: 300px;
+    padding: 2.5rem 2rem 0 2rem;
   }
 }/*# sourceMappingURL=stile.css.map */

@@ -7,50 +7,56 @@
         <!-- import css -->
         <link rel="stylesheet" href="stile.css">
         <!-- import icon -->
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
         <!-- import favicon -->
-        <link rel="shortcut icon" href="../../img/favicon.ico"
-            type="image/x-icon">
-        <!-- import animation -->
-        <link rel="stylesheet" href="https://unpkg.com/transition-style">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
     </head>
     <body>
+        <article id="code-loader">
+            <span>{</span>
+            <span>}</span>
+            <i class="iconoir-folder"></i>
+        </article>
+
         <header id="header">
             <div class="navlogo">
-                <i class="ph-bold ph-qr-code"></i>
+                <i class="iconoir-code-brackets-square"></i>
             </div>
             <nav id="mySidePanel" class="sidePanel">
                 <ul class="navMenu">
-                    <a href="#" class="closedBtn" onclick="closedNav()">
-                        <i class="ph-bold ph-x"></i>
-                    </a>
-                    <a href="../../../index.html" class="item">
-                        <i class="ph-bold ph-user"></i>
-                        Sobre mim
-                    </a>
-                    <a href="../servicos/index.html" class="item">
-                        <i class="ph-bold ph-pencil-line"></i>
-                        Serviços
-                    </a>
-                    <a href="../habilidades/index.html" class="item">
-                        <i class="ph-bold ph-trophy"></i>
-                        Habilidades
-                    </a>
-                    <a href="../contato/index.html" class="item">
-                        <i class="ph-bold ph-chat-dots"></i>
-                        Contato
-                    </a>
+                    <li>
+                        <a href="#" class="closedBtn" onclick="closedNav()">
+                            <i class="iconoir-xmark"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../../index.html" class="item">
+                            <i class="iconoir-user-circle"></i>
+                            Sobre mim
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../servicos/index.html" class="item">
+                            <i class="iconoir-edit-pencil"></i>
+                            Serviços
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../habilidades/index.html" class="item">
+                            <i class="iconoir-trophy"></i>
+                            Habilidades
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <div class="grpButton">
                 <button class="toggle" onclick="toggleTheme()">
-                    <i class="ph-bold ph-moon"></i>
+                    <i id="themeIcon" class="iconoir-half-moon"></i>
                 </button>
 
                 <button class="openBtn" onclick="openNav()">
-                    <i class="ph-bold ph-text-outdent"></i>
+                    <i class="iconoir-menu-scale"></i>
                 </button>
             </div>
         </header>
@@ -59,18 +65,16 @@
             <section class="container">
 
                 <button onclick="topFunction()" id="myBtn" title="Go to top">
-                    <i class="ph-bold ph-arrow-up"></i>
+                    <i class="iconoir-dot-arrow-up"></i>
                 </button>
-
-                <h1 id="title">Projetos</h1>
 
                 <div class="card">
                     <button class="open-btn">
-                        <i class="ph-bold ph-arrows-out-simple"></i>
+                        <i class="iconoir-arrow-separate-vertical"></i>
                     </button>
 
                     <article class="popup">
-                        <i class="ph-bold ph-x-circle close-btn"></i>
+                        <i class="iconoir-xmark-square close-btn"></i>
 
                         <header class="content">
                             <h2>Tecnologias utilizadas:</h2>
@@ -81,12 +85,12 @@
                             <a href="https://darneees.github.io/Health-Clinic/"
                                 target="_blank">
                                 Visualizar
-                                <i class="ph-bold ph-eye"></i>
+                                <i class="iconoir-eye-solid"></i>
                             </a>
                             <a href="https://github.com/darneees/Health-Clinic"
                                 target="_blank">
                                 Repositorio
-                                <i class="ph-bold ph-github-logo"></i>
+                                <i class="iconoir-github"></i>
                             </a>
                         </footer>
                     </article>
@@ -97,11 +101,11 @@
 
                 <div class="card">
                     <button class="open-btn">
-                        <i class="ph-bold ph-arrows-out-simple"></i>
+                        <i class="iconoir-arrow-separate-vertical"></i>
                     </button>
 
                     <article class="popup">
-                        <i class="ph-bold ph-x-circle close-btn"></i>
+                        <i class="iconoir-xmark-square close-btn"></i>
 
                         <header class="content">
                             <h2>Tecnologias utilizadas:</h2>
@@ -112,12 +116,12 @@
                             <a href="https://darneees.github.io/Relative-Tech/"
                                 target="_blank">
                                 Visualizar
-                                <i class="ph-bold ph-eye"></i>
+                                <i class="iconoir-eye-solid"></i>
                             </a>
                             <a href="https://github.com/darneees/Relative-Tech"
                                 target="_blank">
                                 Repositorio
-                                <i class="ph-bold ph-github-logo"></i>
+                                <i class="iconoir-github"></i>
                             </a>
                         </footer>
                     </article>
@@ -128,11 +132,11 @@
 
                 <div class="card">
                     <button class="open-btn">
-                        <i class="ph-bold ph-arrows-out-simple"></i>
+                        <i class="iconoir-arrow-separate-vertical"></i>
                     </button>
 
                     <article class="popup">
-                        <i class="ph-bold ph-x-circle close-btn"></i>
+                        <i class="iconoir-xmark-square close-btn"></i>
 
                         <header class="content">
                             <h2>Tecnologias utilizadas:</h2>
@@ -143,12 +147,12 @@
                             <a href="https://darneees.github.io/AluraFlix-02/"
                                 target="_blank">
                                 Visualizar
-                                <i class="ph-bold ph-eye"></i>
+                                <i class="iconoir-eye-solid"></i>
                             </a>
                             <a href="https://github.com/darneees/AluraFlix-02"
                                 target="_blank">
                                 Repositorio
-                                <i class="ph-bold ph-github-logo"></i>
+                                <i class="iconoir-github"></i>
                             </a>
                         </footer>
                     </article>
@@ -159,11 +163,11 @@
 
                 <div class="card">
                     <button class="open-btn">
-                        <i class="ph-bold ph-arrows-out-simple"></i>
+                        <i class="iconoir-arrow-separate-vertical"></i>
                     </button>
 
                     <article class="popup">
-                        <i class="ph-bold ph-x-circle close-btn"></i>
+                        <i class="iconoir-xmark-square close-btn"></i>
 
                         <header class="content">
                             <h2>Tecnologias utilizadas:</h2>
@@ -174,12 +178,12 @@
                             <a href="https://darneees.github.io/QrCodeGenerator/"
                                 target="_blank">
                                 Visualizar
-                                <i class="ph-bold ph-eye"></i>
+                                <i class="iconoir-eye-solid"></i>
                             </a>
                             <a href="https://github.com/darneees/QrCodeGenerator"
                                 target="_blank">
                                 Repositorio
-                                <i class="ph-bold ph-github-logo"></i>
+                                <i class="iconoir-github"></i>
                             </a>
                         </footer>
                     </article>
@@ -189,8 +193,8 @@
                 </div>
 
                 <a href="https://github.com/darneees?tab=repositories" target="_blank" class="more">
-                    Mais Projetos
-                    <i class="ph-bold ph-arrow-square-out"></i>
+                    Mais
+                    <i class="iconoir-open-new-window"></i>
                 </a>
 
                 <span class="reserved"><strong>© Douglas Sá.</strong> All rigths
@@ -198,6 +202,9 @@
             </section>
         </main>
 
+        <!-- loader -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- import js -->
         <script src="app.js"></script>
     </body>
 </html>
