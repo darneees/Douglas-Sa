@@ -232,8 +232,9 @@ body #code-loader i {
   color: #17b380;
 }
 .darkMode .container .card .title {
-  background-color: #202024;
-  color: #fafafa;
+  background-color: #fafafa;
+  color: #121214;
+  font-weight: 800;
 }
 .darkMode .container .more {
   background-color: transparent;
