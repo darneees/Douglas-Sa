@@ -58,7 +58,6 @@ header {
 header .navlogo i {
   color: #121214;
   font-size: 2rem;
-  opacity: 0.5;
 }
 header .grpButton {
   display: flex;
@@ -223,6 +222,11 @@ header .grpButton .openBtn:hover {
   border: 3px solid #202024;
   color: #fafafa;
 }
+.darkMode .secContainer #modal .other-links {
+  background-color: transparent;
+  border: 3px solid rgba(175, 171, 182, 0.6509803922);
+  color: #fafafa;
+}
 .darkMode .secContainer .secContent h1 {
   color: #17171A;
   text-shadow: -1px -1px 0 #fafafa, 1px -1px 0 #fafafa, -1px 1px 0 #fafafa, 1px 1px 0 #fafafa;
@@ -254,7 +258,7 @@ header .grpButton .openBtn:hover {
   position: relative;
 }
 .secContainer #overlay {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -281,7 +285,7 @@ header .grpButton .openBtn:hover {
   border-radius: 1rem;
   padding: 2rem 2rem 0 2rem;
   gap: 2rem;
-  display: none;
+  display: block;
 }
 .secContainer #modal h2 {
   display: flex;
@@ -381,6 +385,38 @@ header .grpButton .openBtn:hover {
   width: 100%;
   font-size: 1.5rem;
   transition: 0.5s;
+}
+.secContainer #modal .other-links {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  right: 3rem;
+  bottom: 1.5rem;
+  text-decoration: none;
+  background-color: #fafafa;
+  border: 3px solid #202024;
+  color: #202024;
+  width: 4rem;
+  height: 3.5rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.secContainer #modal .other-links p {
+  display: none;
+}
+.secContainer #modal .other-links i {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fafafa;
+  height: 100%;
 }
 .secContainer .secContent {
   display: flex;
@@ -574,6 +610,9 @@ header .grpButton .openBtn:hover {
   .secContainer #modal .cv-link:hover i {
     font-size: 1.5rem;
   }
+  .secContainer #modal .other-links {
+    right: 3rem;
+  }
   .secContainer .secContent {
     display: flex;
     align-items: center;
@@ -639,6 +678,9 @@ header .grpButton .openBtn:hover {
   }
   .secContainer #modal .cv-link:hover i {
     font-size: 1.5rem;
+  }
+  .secContainer #modal .other-links {
+    right: 3rem;
   }
   .secContainer .secContent {
     display: flex;

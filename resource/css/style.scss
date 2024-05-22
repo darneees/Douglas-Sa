@@ -60,7 +60,6 @@ header {
     .navlogo i {
         color: $bg-dark-10;
         font-size: 2rem;
-        opacity: .5;
     }
 
     .grpButton {
@@ -261,6 +260,12 @@ header {
                     }
                 }
             }
+
+            .other-links {
+                background-color: transparent;
+                border: 3px solid $bg-gray-20;
+                color: $white;
+            }
         }
 
         .secContent {
@@ -303,7 +308,7 @@ header {
     position: relative;
 
     #overlay {
-        display: none;
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
@@ -327,7 +332,7 @@ header {
         border-radius: 1rem;
         padding: 2rem 2rem 0 2rem;
         gap: 2rem;
-        display: none;
+        display: block;
 
         h2 {
             @include align (center, row, center);
@@ -425,6 +430,35 @@ header {
                     font-size: 1.5rem;
                     transition: .5s;
                 }
+            }
+        }
+
+        .other-links {
+            @include align (center, row, center);
+            position: absolute;
+            right: 3rem;
+            bottom: 1.5rem;
+            text-decoration: none;
+            background-color: $white;
+            border: 3px solid $bg-dark-30;
+            color: $bg-dark-30;
+            width: 4rem;
+            height: 3.5rem;
+            border-radius: .6rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            p {
+                display: none;
+            }
+
+            i {
+                @include align (center, row, center);
+                font-size: 1.5rem;
+                color: $white;
+                height: 100%;
             }
         }
     }
@@ -563,7 +597,7 @@ header {
 
 @media (min-width: 1200px) and (max-width: 1999px) {
     header {
-        .navlogo i {
+        .navlogo i  {
             font-size: 2rem;
         }
 
@@ -614,7 +648,7 @@ header {
 
 @media (min-width: 1000px) and (max-width: 1199px) {
     header {
-        .navlogo i {
+        .navlogo i  {
             font-size: 1.5rem;
         }
 
@@ -661,6 +695,10 @@ header {
                     font-size: 1.5rem;
                 }
             }
+
+            .other-links {
+                right: 3rem;
+            }
         }
 
         .secContent {
@@ -694,7 +732,7 @@ header {
 @media (min-width: 770px) and (max-width: 999px) {
 
     header {
-        .navlogo i {
+        .navlogo i  {
             font-size: 1.5rem;
         }
 
@@ -740,6 +778,10 @@ header {
                 &:hover i {
                     font-size: 1.5rem;
                 }
+            }
+
+            .other-links {
+                right: 3rem;
             }
         }
 
@@ -856,7 +898,7 @@ header {
 @media (max-width: 429px) {
 
     header {
-        .navlogo i {
+        .navlogo i  {
             font-size: 1.5rem;
         }
 
