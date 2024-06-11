@@ -6,12 +6,12 @@
 
 ## light mode :sunny:
 
-![light](https://github.com/darneees/Douglas-Sa/assets/79709843/b922b44e-998d-4e1e-9b3d-91d05bc08790)
+![light-theme](https://github.com/darneees/Douglas-Sa/assets/79709843/680eecf4-cddc-4365-a95e-4e88693b8e2d)
 
 
 ## dark mode :crescent_moon:
 
-![dark](https://github.com/darneees/Douglas-Sa/assets/79709843/c11bb867-80bb-4fbf-a1d1-e143acabc276)
+![dark-theme](https://github.com/darneees/Douglas-Sa/assets/79709843/95d0e1aa-c536-4722-b6b7-f7eda3cd5cf9)
 
 
 ## ✔️ Tecnologias utilizadas:
