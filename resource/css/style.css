@@ -233,9 +233,6 @@ header .grpButton .openBtn:hover {
 .darkMode .secContainer .secContent p {
   color: #AFABB6;
 }
-.darkMode .secContainer .secImage img {
-  box-shadow: rgba(0, 0, 0, 0.72) 0 5px 20px;
-}
 .darkMode .secContainer .reserved {
   color: #fafafa;
   opacity: 0.5;
@@ -404,7 +401,7 @@ header .grpButton .openBtn:hover {
   font-size: 1.2rem;
   color: #202024;
   text-indent: 1rem;
-  opacity: 0.7;
+  opacity: 0.75;
   margin: 1rem 0 1rem 0;
 }
 .secContainer .secContent #modalBtn {
@@ -414,7 +411,7 @@ header .grpButton .openBtn:hover {
   justify-content: space-between;
   background-color: transparent;
   color: #17b380;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   width: 7rem;
   border: none;
   outline: none;
@@ -424,16 +421,6 @@ header .grpButton .openBtn:hover {
 .secContainer .secContent #modalBtn i {
   color: #17b380;
   font-size: 1.5rem;
-}
-.secContainer .secImage {
-  width: 450px;
-  z-index: 2;
-  animation: 10s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
-}
-.secContainer .secImage img {
-  width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
-  animation: ocean 4s linear infinite;
 }
 .secContainer .reserved {
   position: absolute;
@@ -485,9 +472,6 @@ header .grpButton .openBtn:hover {
   .secContainer .secContent p {
     width: 600px;
   }
-  .secContainer .secImage {
-    width: 550px;
-  }
   .secContainer .reserved {
     bottom: 2rem;
     font-size: 1rem;
@@ -522,9 +506,6 @@ header .grpButton .openBtn:hover {
   }
   .secContainer .secContent p {
     width: 525px;
-  }
-  .secContainer .secImage {
-    width: 500px;
   }
   .secContainer .reserved {
     bottom: 2rem;
@@ -589,9 +570,6 @@ header .grpButton .openBtn:hover {
     font-size: 1rem;
     width: 70%;
   }
-  .secContainer .secImage {
-    width: 400px;
-  }
   .secContainer .reserved {
     bottom: 1rem;
     font-size: 0.7rem;
@@ -655,9 +633,6 @@ header .grpButton .openBtn:hover {
     font-size: 1rem;
     width: 70%;
   }
-  .secContainer .secImage {
-    width: 340px;
-  }
   .secContainer .reserved {
     bottom: 1rem;
     font-size: 0.7rem;
@@ -681,13 +656,13 @@ header .grpButton .openBtn:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 1rem;
     text-align: center;
   }
   .secContainer #modal {
     top: 5%;
-    max-width: 90%;
+    max-width: 85%;
     height: 80%;
     padding: 2rem 2rem 0 2rem;
   }
@@ -708,23 +683,22 @@ header .grpButton .openBtn:hover {
   }
   .secContainer .secContent {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     justify-content: center;
+    padding: 0 3rem;
   }
   .secContainer .secContent h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   .secContainer .secContent span {
     font-weight: 500;
     font-size: 1rem;
   }
   .secContainer .secContent p {
-    font-size: 1rem;
-    width: 80%;
-  }
-  .secContainer .secImage {
-    width: 370px;
+    font-size: 1.15rem;
+    text-align: start;
+    width: 100%;
   }
   .secContainer .reserved {
     bottom: 1rem;
@@ -749,13 +723,13 @@ header .grpButton .openBtn:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 1rem;
     padding: 1rem 0 0 0;
   }
   .secContainer #modal {
     top: 5%;
-    max-width: 90%;
+    max-width: 85%;
     height: 90%;
     padding: 1.5rem 2rem 0 2rem;
   }
@@ -776,24 +750,22 @@ header .grpButton .openBtn:hover {
   }
   .secContainer .secContent {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     justify-content: center;
+    padding: 0 3rem;
   }
   .secContainer .secContent h1 {
-    font-size: 2.1rem;
+    font-size: 2.75rem;
   }
   .secContainer .secContent span {
     font-weight: 500;
     font-size: 1rem;
   }
   .secContainer .secContent p {
-    font-size: 1rem;
-    width: 90%;
-    text-align: center;
-  }
-  .secContainer .secImage {
-    width: 270px;
+    font-size: 1.15rem;
+    width: 100%;
+    text-align: start;
   }
   .secContainer .reserved {
     bottom: 3.5rem;
