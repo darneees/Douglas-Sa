@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Manrope", sans-serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 body {
@@ -195,9 +194,6 @@ header .grpButton .openBtn:hover {
 .darkMode .secContainer #modal h2 {
   color: #fafafa;
 }
-.darkMode .secContainer #modal p {
-  color: #AFABB6;
-}
 .darkMode .secContainer #modal #closeBtn {
   color: #fafafa;
 }
@@ -288,13 +284,6 @@ header .grpButton .openBtn:hover {
   font-weight: 800;
   color: #202024;
   margin: 1rem 0 0 0;
-}
-.secContainer #modal p {
-  font-size: 1.2rem;
-  text-indent: 1rem;
-  font-weight: 300;
-  opacity: 0.9;
-  color: #202024;
 }
 .secContainer #modal #closeBtn {
   position: absolute;
@@ -388,7 +377,7 @@ header .grpButton .openBtn:hover {
 }
 .secContainer .secContent h1 {
   color: #121214;
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   font-weight: 800;
 }
 .secContainer .secContent span {
@@ -535,9 +524,6 @@ header .grpButton .openBtn:hover {
     height: 32rem;
     padding: 2rem 2rem 0 2rem;
   }
-  .secContainer #modal p {
-    display: none;
-  }
   .secContainer #modal .cv-link {
     width: 11.5rem;
     height: 3.5rem;
@@ -593,9 +579,6 @@ header .grpButton .openBtn:hover {
     max-width: 90%;
     height: 35rem;
     padding: 2rem 2rem 0 2rem;
-  }
-  .secContainer #modal p {
-    display: none;
   }
   .secContainer #modal .cv-link {
     width: 11.5rem;
@@ -653,9 +636,6 @@ header .grpButton .openBtn:hover {
     max-width: 85%;
     height: 80%;
     padding: 2rem 2rem 0 2rem;
-  }
-  .secContainer #modal p {
-    display: none;
   }
   .secContainer #modal .cv-link {
     width: 11.5rem;
@@ -716,9 +696,6 @@ header .grpButton .openBtn:hover {
     max-width: 85%;
     height: 90%;
     padding: 1.5rem 2rem 0 2rem;
-  }
-  .secContainer #modal p {
-    display: none;
   }
   .secContainer #modal .cv-link {
     width: 11.5rem;

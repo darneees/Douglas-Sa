@@ -1,11 +1,9 @@
 @import './imports/funtion',
 './imports/varibles';
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
 * {
     @include reset();
-    font-family: "Manrope", sans-serif;
+    font-family: 'Satoshi', sans-serif;
 }
 
 body {
@@ -221,10 +219,6 @@ header {
                 color: $white;
             }
 
-            p {
-                color: $bg-gray-10;
-            }
-
             #closeBtn {
                 color: $white;
             }
@@ -331,14 +325,6 @@ header {
             margin: 1rem 0 0 0;
         }
 
-        p {
-            font-size: 1.2rem;
-            text-indent: 1rem;
-            font-weight: 300;
-            opacity: 0.9;
-            color: $bg-dark-30;
-        }
-
         #closeBtn {
             position: absolute;
             top: .5rem;
@@ -430,7 +416,7 @@ header {
 
         h1 {
             color: $bg-dark-10;
-            font-size: 5.5rem;
+            font-size: 4.5rem;
             font-weight: 800;
         }
 
@@ -609,10 +595,6 @@ header {
             height: 32rem;
             padding: 2rem 2rem 0 2rem;
 
-            p {
-                display: none;
-            }
-
             .cv-link {
                 width: 11.5rem;
                 height: 3.5rem;
@@ -683,10 +665,6 @@ header {
             max-width: 90%;
             height: 35rem;
             padding: 2rem 2rem 0 2rem;
-
-            p {
-                display: none;
-            }
 
             .cv-link {
                 width: 11.5rem;
@@ -760,10 +738,6 @@ header {
             height: 80%;
             padding: 2rem 2rem 0 2rem;
 
-            p {
-                display: none;
-            }
-
             .cv-link {
                 width: 11.5rem;
                 height: 3.5rem;
@@ -834,10 +808,6 @@ header {
             max-width: 85%;
             height: 90%;
             padding: 1.5rem 2rem 0 2rem;
-
-            p {
-                display: none;
-            }
 
             .cv-link {
                 width: 11.5rem;
