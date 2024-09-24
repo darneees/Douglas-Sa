@@ -55,11 +55,6 @@ header {
     height: 10vh;
     position: relative;
 
-    .navlogo i {
-        color: $bg-dark-10;
-        font-size: 2rem;
-    }
-
     .grpButton {
         @include align (center, row, center);
         gap: .5rem;
@@ -128,10 +123,10 @@ header {
                 color: $white;
                 display: block;
 
-                i {
+                ion-icon {
                     padding: 0 1rem 0 0;
                     color: $bg-gray-20;
-                    font-size: 1.7rem;
+                    font-size: 1.5rem;
                 }
             }
 
@@ -160,10 +155,6 @@ header {
     background-size: 40px 40px;
     background-position: -5px -5px;
     transition: 0.5s;
-
-    .navlogo i {
-        color: $white;
-    }
 
     .grpButton {
         background-color: $white;
@@ -229,7 +220,7 @@ header {
                         color: $bg-gray-10;
 
                         i {
-                            color: $link;
+                            color: $yellow-10;
                         }
                     }
                 }
@@ -248,7 +239,7 @@ header {
 
                 &:hover {
                     i {
-                        background-color: $link;
+                        background-color: $yellow-10;
                         border: 3px solid $bg-dark-30;
                         color: $white;
                     }
@@ -353,12 +344,12 @@ header {
 
 
                     #load {
-                        color: $load;
+                        color: $yellow-10;
 
                     }
 
                     i {
-                        color: $link;
+                        color: $yellow-10;
                         font-size: 1.5rem;
                         padding: 0 1rem 0 0;
                     }
@@ -374,7 +365,7 @@ header {
             background-color: $white;
             border: 3px solid $bg-dark-30;
             color: $bg-dark-30;
-            width: 11.5rem;
+            width: 7.5rem;
             height: 3.5rem;
             border-radius: .6rem;
             padding: 0 0 0 1rem;
@@ -398,7 +389,7 @@ header {
 
             &:hover {
                 i {
-                    background-color: $link;
+                    background-color: $yellow-10;
                     color: $white;
                     width: 100%;
                     font-size: 1.5rem;
@@ -437,7 +428,7 @@ header {
         #modalBtn {
             @include align (center, row, space-between);
             background-color: transparent;
-            color: $link;
+            color: $yellow-10;
             font-size: 1.25rem;
             width: 7rem;
             border: none;
@@ -446,7 +437,7 @@ header {
             cursor: pointer;
 
             i {
-                color: $link;
+                color: $yellow-10;
                 font-size: 1.5rem;
             }
         }
@@ -498,7 +489,7 @@ header {
 // selection
 
 ::selection {
-    background-color: $link;
+    background-color: $yellow-10;
     color: $white;
 }
 
@@ -524,9 +515,6 @@ header {
 
 @media (min-width: 1200px) and (max-width: 1999px) {
     header {
-        .navlogo i  {
-            font-size: 2rem;
-        }
 
         .grpButton {
             .toggle {
@@ -566,9 +554,6 @@ header {
 
 @media (min-width: 1000px) and (max-width: 1199px) {
     header {
-        .navlogo i  {
-            font-size: 1.5rem;
-        }
 
         .grpButton {
             .toggle {
@@ -596,7 +581,7 @@ header {
             padding: 2rem 2rem 0 2rem;
 
             .cv-link {
-                width: 11.5rem;
+                width: 7.5rem;
                 height: 3.5rem;
                 bottom: 2.5rem;
 
@@ -637,9 +622,6 @@ header {
 @media (min-width: 770px) and (max-width: 999px) {
 
     header {
-        .navlogo i  {
-            font-size: 1.5rem;
-        }
 
         .grpButton {
             .toggle {
@@ -667,7 +649,7 @@ header {
             padding: 2rem 2rem 0 2rem;
 
             .cv-link {
-                width: 11.5rem;
+                width: 7.5rem;
                 height: 3.5rem;
                 bottom: 2.5rem;
 
@@ -708,9 +690,6 @@ header {
 @media (min-width: 430px) and (max-width: 769px) {
 
     header {
-        .navlogo i {
-            font-size: 1.5rem;
-        }
 
         .grpButton {
             .toggle {
@@ -733,13 +712,13 @@ header {
         text-align: center;
 
         #modal {
-            top: 5%;
+            top: 10%;
             max-width: 85%;
-            height: 80%;
+            height: 75%;
             padding: 2rem 2rem 0 2rem;
 
             .cv-link {
-                width: 11.5rem;
+                width: 7.5rem;
                 height: 3.5rem;
                 bottom: 2.5rem;
 
@@ -779,9 +758,6 @@ header {
 @media (max-width: 429px) {
 
     header {
-        .navlogo i  {
-            font-size: 1.5rem;
-        }
 
         .grpButton {
             .toggle {
@@ -804,13 +780,13 @@ header {
         padding: 1rem 0 0 0;
 
         #modal {
-            top: 5%;
+            top: 10%;
             max-width: 85%;
-            height: 90%;
+            height: 75%;
             padding: 1.5rem 2rem 0 2rem;
 
             .cv-link {
-                width: 11.5rem;
+                width: 7.5rem;
                 height: 3.5rem;
                 bottom: 2rem;
 

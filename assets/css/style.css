@@ -9,7 +9,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(rgba(12, 12, 12, 0.088) 2px, transparent 0);
+  background-image: radial-gradient(rgba(12, 12, 12, 0.16) 2px, transparent 0);
   background-size: 40px 40px;
   background-position: -5px -5px;
   overflow: hidden;
@@ -20,15 +20,15 @@ body #code-loader {
   flex-direction: row;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #17171A;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-color: #1B1C1E;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.13) 2px, transparent 0);
   background-size: 40px 40px;
   background-position: -5px -5px;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 6;
-  color: #fafafa;
+  color: #eaebed;
   font-weight: bold;
   font-size: 100px;
 }
@@ -54,18 +54,14 @@ header {
   height: 10vh;
   position: relative;
 }
-header .navlogo i {
-  color: #121214;
-  font-size: 2rem;
-}
 header .grpButton {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #121214;
-  color: #fafafa;
+  background-color: #1d1d27;
+  color: #eaebed;
   border-radius: 0.7rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
   width: 8.5rem;
@@ -77,7 +73,7 @@ header .grpButton .toggle {
   flex-direction: row;
   justify-content: center;
   background-color: transparent;
-  color: #fafafa;
+  color: #eaebed;
   border: none;
   outline: none;
   font-size: 1.6rem;
@@ -93,7 +89,7 @@ header .grpButton .openBtn {
   flex-direction: row;
   justify-content: center;
   background-color: transparent;
-  color: #fafafa;
+  color: #eaebed;
   font-size: 1.6rem;
   border: none;
   outline: none;
@@ -125,13 +121,13 @@ header .grpButton .openBtn:hover {
   padding: 1rem 1rem 1rem 4rem;
   text-decoration: none;
   font-size: 1.5rem;
-  color: #fafafa;
+  color: #eaebed;
   display: block;
 }
-.sidePanel .navMenu li a i {
+.sidePanel .navMenu li a ion-icon {
   padding: 0 1rem 0 0;
   color: rgba(175, 171, 182, 0.6509803922);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 .sidePanel .navMenu li .closedBtn {
   position: absolute;
@@ -141,7 +137,7 @@ header .grpButton .openBtn:hover {
 }
 .sidePanel .navMenu li .closedBtn i {
   font-size: 2rem;
-  color: #fafafa;
+  color: #eaebed;
 }
 
 .sidePanel:has(.item:hover) .item:not(:hover) {
@@ -149,26 +145,23 @@ header .grpButton .openBtn:hover {
 }
 
 .darkMode {
-  background-color: #17171A;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-color: #1B1C1E;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.13) 2px, transparent 0);
   background-size: 40px 40px;
   background-position: -5px -5px;
   transition: 0.5s;
 }
-.darkMode .navlogo i {
-  color: #fafafa;
-}
 .darkMode .grpButton {
-  background-color: #fafafa;
+  background-color: #eaebed;
 }
 .darkMode .grpButton .toggle {
-  color: #121214;
+  color: #1d1d27;
 }
 .darkMode .grpButton .toggle:hover {
   color: #AFABB6;
 }
 .darkMode .grpButton .openBtn {
-  color: #121214;
+  color: #1d1d27;
 }
 .darkMode .grpButton .openBtn:hover {
   color: #AFABB6;
@@ -177,10 +170,10 @@ header .grpButton .openBtn:hover {
   background-color: #202024;
 }
 .darkMode .sidePanel .navMenu li a {
-  color: #fafafa;
+  color: #eaebed;
 }
 .darkMode .sidePanel .navMenu li a:hover, .darkMode .sidePanel .navMenu li a:hover i {
-  color: #fafafa;
+  color: #eaebed;
 }
 .darkMode .sidePanel .navMenu li a i {
   color: rgba(175, 171, 182, 0.6509803922);
@@ -192,35 +185,35 @@ header .grpButton .openBtn:hover {
   background-color: #202024;
 }
 .darkMode .secContainer #modal h2 {
-  color: #fafafa;
+  color: #eaebed;
 }
 .darkMode .secContainer #modal #closeBtn {
-  color: #fafafa;
+  color: #eaebed;
 }
 .darkMode .secContainer #modal article ul li {
   color: #AFABB6;
 }
 .darkMode .secContainer #modal article ul li i {
-  color: #17b380;
+  color: #ffaf2a;
 }
 .darkMode .secContainer #modal .cv-link {
   background-color: transparent;
   border: 3px solid rgba(175, 171, 182, 0.6509803922);
-  color: #fafafa;
+  color: #eaebed;
 }
 .darkMode .secContainer #modal .cv-link i {
-  background-color: #fafafa;
-  border: 3px solid #121214;
+  background-color: #eaebed;
+  border: 3px solid #1d1d27;
   color: #202024;
 }
 .darkMode .secContainer #modal .cv-link:hover i {
-  background-color: #17b380;
+  background-color: #ffaf2a;
   border: 3px solid #202024;
-  color: #fafafa;
+  color: #eaebed;
 }
 .darkMode .secContainer .secContent h1 {
-  color: #17171A;
-  text-shadow: -1px -1px 0 #fafafa, 1px -1px 0 #fafafa, -1px 1px 0 #fafafa, 1px 1px 0 #fafafa;
+  color: #1B1C1E;
+  text-shadow: -1px -1px 0 #eaebed, 1px -1px 0 #eaebed, -1px 1px 0 #eaebed, 1px 1px 0 #eaebed;
 }
 .darkMode .secContainer .secContent span {
   color: #AFABB6;
@@ -230,7 +223,7 @@ header .grpButton .openBtn:hover {
   color: #AFABB6;
 }
 .darkMode .secContainer .secContent .section-links a {
-  color: #fafafa;
+  color: #eaebed;
 }
 
 .secContainer {
@@ -261,7 +254,7 @@ header .grpButton .openBtn:hover {
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #fafafa;
+  background-color: #eaebed;
   box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
   position: fixed;
   top: auto;
@@ -317,10 +310,10 @@ header .grpButton .openBtn:hover {
   opacity: 0.9;
 }
 .secContainer #modal article ul li #load {
-  color: #F2CD5C;
+  color: #ffaf2a;
 }
 .secContainer #modal article ul li i {
-  color: #17b380;
+  color: #ffaf2a;
   font-size: 1.5rem;
   padding: 0 1rem 0 0;
 }
@@ -332,10 +325,10 @@ header .grpButton .openBtn:hover {
   position: absolute;
   bottom: 1.5rem;
   text-decoration: none;
-  background-color: #fafafa;
+  background-color: #eaebed;
   border: 3px solid #202024;
   color: #202024;
-  width: 11.5rem;
+  width: 7.5rem;
   height: 3.5rem;
   border-radius: 0.6rem;
   padding: 0 0 0 1rem;
@@ -350,9 +343,9 @@ header .grpButton .openBtn:hover {
   flex-direction: row;
   justify-content: center;
   background-color: #202024;
-  border: 3px solid #fafafa;
+  border: 3px solid #eaebed;
   font-size: 1.2rem;
-  color: #fafafa;
+  color: #eaebed;
   height: 100%;
   width: 4rem;
   position: absolute;
@@ -360,8 +353,8 @@ header .grpButton .openBtn:hover {
   border-radius: 0.5rem;
 }
 .secContainer #modal .cv-link:hover i {
-  background-color: #17b380;
-  color: #fafafa;
+  background-color: #ffaf2a;
+  color: #eaebed;
   width: 100%;
   font-size: 1.5rem;
   transition: 0.5s;
@@ -376,7 +369,7 @@ header .grpButton .openBtn:hover {
   z-index: 3;
 }
 .secContainer .secContent h1 {
-  color: #121214;
+  color: #1d1d27;
   font-size: 4.5rem;
   font-weight: 800;
 }
@@ -398,7 +391,7 @@ header .grpButton .openBtn:hover {
   flex-direction: row;
   justify-content: space-between;
   background-color: transparent;
-  color: #17b380;
+  color: #ffaf2a;
   font-size: 1.25rem;
   width: 7rem;
   border: none;
@@ -407,7 +400,7 @@ header .grpButton .openBtn:hover {
   cursor: pointer;
 }
 .secContainer .secContent #modalBtn i {
-  color: #17b380;
+  color: #ffaf2a;
   font-size: 1.5rem;
 }
 .secContainer .secContent .section-links {
@@ -419,7 +412,7 @@ header .grpButton .openBtn:hover {
 }
 .secContainer .secContent .section-links a {
   text-decoration: none;
-  color: #121214;
+  color: #1d1d27;
 }
 .secContainer .secContent .section-links a i {
   font-size: 2.2rem;
@@ -443,12 +436,12 @@ header .grpButton .openBtn:hover {
   }
 }
 ::-moz-selection {
-  background-color: #17b380;
-  color: #fafafa;
+  background-color: #ffaf2a;
+  color: #eaebed;
 }
 ::selection {
-  background-color: #17b380;
-  color: #fafafa;
+  background-color: #ffaf2a;
+  color: #eaebed;
 }
 
 @media (min-width: 2000px) {
@@ -467,9 +460,6 @@ header .grpButton .openBtn:hover {
   }
 }
 @media (min-width: 1200px) and (max-width: 1999px) {
-  header .navlogo i {
-    font-size: 2rem;
-  }
   header .grpButton .toggle {
     font-size: 1.5rem;
     height: 3.3rem;
@@ -498,9 +488,6 @@ header .grpButton .openBtn:hover {
   }
 }
 @media (min-width: 1000px) and (max-width: 1199px) {
-  header .navlogo i {
-    font-size: 1.5rem;
-  }
   header .grpButton .toggle {
     font-size: 1.3rem;
     height: 3rem;
@@ -525,7 +512,7 @@ header .grpButton .openBtn:hover {
     padding: 2rem 2rem 0 2rem;
   }
   .secContainer #modal .cv-link {
-    width: 11.5rem;
+    width: 7.5rem;
     height: 3.5rem;
     bottom: 2.5rem;
   }
@@ -554,9 +541,6 @@ header .grpButton .openBtn:hover {
   }
 }
 @media (min-width: 770px) and (max-width: 999px) {
-  header .navlogo i {
-    font-size: 1.5rem;
-  }
   header .grpButton .toggle {
     font-size: 1.3rem;
     height: 3rem;
@@ -581,7 +565,7 @@ header .grpButton .openBtn:hover {
     padding: 2rem 2rem 0 2rem;
   }
   .secContainer #modal .cv-link {
-    width: 11.5rem;
+    width: 7.5rem;
     height: 3.5rem;
     bottom: 2.5rem;
   }
@@ -610,9 +594,6 @@ header .grpButton .openBtn:hover {
   }
 }
 @media (min-width: 430px) and (max-width: 769px) {
-  header .navlogo i {
-    font-size: 1.5rem;
-  }
   header .grpButton .toggle {
     font-size: 1.3rem;
     height: 3rem;
@@ -632,13 +613,13 @@ header .grpButton .openBtn:hover {
     text-align: center;
   }
   .secContainer #modal {
-    top: 5%;
+    top: 10%;
     max-width: 85%;
-    height: 80%;
+    height: 75%;
     padding: 2rem 2rem 0 2rem;
   }
   .secContainer #modal .cv-link {
-    width: 11.5rem;
+    width: 7.5rem;
     height: 3.5rem;
     bottom: 2.5rem;
   }
@@ -670,9 +651,6 @@ header .grpButton .openBtn:hover {
   }
 }
 @media (max-width: 429px) {
-  header .navlogo i {
-    font-size: 1.5rem;
-  }
   header .grpButton .toggle {
     font-size: 1.3rem;
     height: 3rem;
@@ -692,13 +670,13 @@ header .grpButton .openBtn:hover {
     padding: 1rem 0 0 0;
   }
   .secContainer #modal {
-    top: 5%;
+    top: 10%;
     max-width: 85%;
-    height: 90%;
+    height: 75%;
     padding: 1.5rem 2rem 0 2rem;
   }
   .secContainer #modal .cv-link {
-    width: 11.5rem;
+    width: 7.5rem;
     height: 3.5rem;
     bottom: 2rem;
   }

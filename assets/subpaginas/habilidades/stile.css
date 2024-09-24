@@ -51,13 +51,6 @@ body #code-loader span:nth-child(odd) {
 body #code-loader span:nth-child(even) {
   opacity: 1;
 }
-body #code-loader i {
-  text-transform: uppercase;
-  font-size: 3rem;
-  color: #FCF7FF;
-  font-weight: 700;
-  opacity: 0.4;
-}
 
 header {
   display: flex;
