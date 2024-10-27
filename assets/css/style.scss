@@ -300,12 +300,12 @@ header {
         top: auto;
         left: auto;
         width: 35rem;
-        height: 34.5rem;
+        height: auto;
         z-index: 5;
         border-radius: 1rem;
-        padding: 2rem 2rem 0 2rem;
-        gap: 2rem;
+        padding: 2rem;
         display: none;
+        gap: 2rem;
 
         h2 {
             @include align (center, row, center);
@@ -359,8 +359,6 @@ header {
 
         .cv-link {
             @include align (center, row, space-between);
-            position: absolute;
-            bottom: 1.5rem;
             text-decoration: none;
             background-color: $white;
             border: 3px solid $bg-dark-30;
@@ -382,8 +380,6 @@ header {
                 color: $white;
                 height: 100%;
                 width: 4rem;
-                position: absolute;
-                right: 0;
                 border-radius: .5rem;
             }
 
@@ -577,8 +573,8 @@ header {
         #modal {
             top: auto;
             max-width: 90%;
-            height: 32rem;
-            padding: 2rem 2rem 0 2rem;
+            height: auto;
+            padding: 3rem 2rem 2rem 2rem;
 
             .cv-link {
                 width: 7.5rem;
@@ -645,8 +641,8 @@ header {
         #modal {
             top: auto;
             max-width: 90%;
-            height: 35rem;
-            padding: 2rem 2rem 0 2rem;
+            height: auto;
+            padding: 3rem 2rem 2rem 2rem;
 
             .cv-link {
                 width: 7.5rem;
@@ -714,8 +710,8 @@ header {
         #modal {
             top: 10%;
             max-width: 85%;
-            height: 75%;
-            padding: 2rem 2rem 0 2rem;
+            height: auto;
+            padding: 3rem 2rem 2rem 2rem;
 
             .cv-link {
                 width: 7.5rem;
@@ -777,13 +773,13 @@ header {
     .secContainer {
         @include align (center, column, center);
         gap: 1rem;
-        padding: 1rem 0 0 0;
+        padding: 1rem;
 
         #modal {
             top: 10%;
             max-width: 85%;
-            height: 75%;
-            padding: 1.5rem 2rem 0 2rem;
+            height: auto;
+            padding: 3rem 2rem 2rem 2rem;
 
             .cv-link {
                 width: 7.5rem;

@@ -54,7 +54,7 @@ closeBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
 function openModal() {
-    modal.style.display = "block";
+    modal.style.display = "flex";
     overlay.style.display = "block";
 }
 
@@ -67,4 +67,4 @@ function closeModal() {
 
 setTimeout(function () {
     $('#code-loader').fadeToggle();
-}, 1300);
+}, 1000);
