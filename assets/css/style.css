@@ -62,7 +62,7 @@ header .grpButton {
   gap: 0.5rem;
   background-color: #1d1d27;
   color: #eaebed;
-  border-radius: 0.7rem;
+  border-radius: 10rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0 5px 20px;
   width: 8.5rem;
   height: 3.3rem;
@@ -80,7 +80,7 @@ header .grpButton .toggle {
   cursor: pointer;
 }
 header .grpButton .toggle:hover {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   transition: 0.5s;
 }
 header .grpButton .openBtn {
@@ -96,7 +96,7 @@ header .grpButton .openBtn {
   cursor: pointer;
 }
 header .grpButton .openBtn:hover {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   transition: 0.5s;
 }
 
@@ -126,7 +126,7 @@ header .grpButton .openBtn:hover {
 }
 .sidePanel .navMenu li a ion-icon {
   padding: 0 1rem 0 0;
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   font-size: 1.5rem;
 }
 .sidePanel .navMenu li .closedBtn {
@@ -176,7 +176,7 @@ header .grpButton .openBtn:hover {
   color: #eaebed;
 }
 .darkMode .sidePanel .navMenu li a i {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
 }
 .darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
   opacity: 0.15;
@@ -198,7 +198,7 @@ header .grpButton .openBtn:hover {
 }
 .darkMode .secContainer #modal .cv-link {
   background-color: transparent;
-  border: 3px solid rgba(175, 171, 182, 0.6509803922);
+  border: 3px solid rgba(175, 171, 182, 0.1254901961);
   color: #eaebed;
 }
 .darkMode .secContainer #modal .cv-link i {

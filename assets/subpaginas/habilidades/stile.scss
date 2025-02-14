@@ -5,7 +5,7 @@
 
 * {
     @include reset();
-    font-family: "Manrope", sans-serif;
+    font-family: 'Satoshi', sans-serif;
 }
 
 html {
@@ -57,17 +57,11 @@ header {
     width: 100%;
     height: 10vh;
 
-    .navlogo i {
-        color: $bg-dark-10;
-        font-size: 2rem;
-        opacity: .5;
-    }
-
     .grpButton {
         @include align (center, row, center, 2rem);
         background-color: $bg-dark-10;
         color: $white;
-        border-radius: .7rem;
+        border-radius: 10rem;
         box-shadow: $shadow;
         width: 8.5rem;
         height: 3.3rem;
@@ -78,7 +72,7 @@ header {
             color: $white;
             border: none;
             outline: none;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             cursor: pointer;
 
             &:hover {
@@ -91,7 +85,7 @@ header {
             @include align (center, row, center, 0);
             background-color: transparent;
             color: $white;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             border: none;
             outline: none;
             cursor: pointer;
@@ -164,9 +158,6 @@ header {
     transition: 0.5s;
 
     header {
-        .navlogo i {
-            color: $white;
-        }
 
         .grpButton {
             background-color: $white;
@@ -234,11 +225,13 @@ header {
 
             .tech__card:nth-child(1),
             .tech__card:nth-child(3),
-            .tech__card:nth-child(5) {
+            .tech__card:nth-child(5),
+            .tech__card:nth-child(7),
+            .tech__card:nth-child(9) {
                 background-color: transparent;
 
-                .fa-brands {
-                    color: $lightGreen;
+                .brand {
+                    color: $bg-yellow-10;
                 }
 
                 h1 {
@@ -251,11 +244,14 @@ header {
             }
 
             .tech__card:nth-child(2),
-            .tech__card:nth-child(4) {
+            .tech__card:nth-child(4),
+            .tech__card:nth-child(6),
+            .tech__card:nth-child(8) {
                 background-color: $bg-dark-30;
+                border: .1rem solid $bg-gray-30;
 
-                .fa-brands {
-                    color: $lightGreen;
+                .brand {
+                    color: $bg-yellow-10;
                 }
 
                 h1 {
@@ -264,23 +260,6 @@ header {
 
                 .check {
                     color: $white;
-                }
-            }
-
-            .tech__card:nth-child(6),
-            .tech__card:nth-child(7) {
-                background-color: $darkGray;
-
-                .fa-brands {
-                    color: $lightGray;
-                }
-
-                h1 {
-                    color: $lightGray;
-                }
-
-                .iconoir-refresh {
-                    color: $bg-gray-10;
                 }
             }
         }
@@ -299,6 +278,7 @@ header {
     position: relative;
     z-index: 1;
 
+    // button go to top
     #myBtn {
         $width: 3.5rem;
         $height: 3.5rem;
@@ -349,7 +329,9 @@ header {
 
         .tech__card:nth-child(1),
         .tech__card:nth-child(3),
-        .tech__card:nth-child(5) {
+        .tech__card:nth-child(5),
+        .tech__card:nth-child(7),
+        .tech__card:nth-child(9) {
             @include align (center, column, flex-end, 1rem);
             position: relative;
             background-color: $bg-dark-10;
@@ -357,15 +339,15 @@ header {
             padding: 0 0 2rem 0;
             box-shadow: $shadow;
 
-            .fa-brands {
-                font-size: 3rem;
-                color: $lightGreen;
+            .brand {
+                font-size: 3.3rem;
+                color: $bg-yellow-10;
             }
 
             h1 {
                 color: $white;
                 letter-spacing: .1rem;
-                font-weight: 500;
+                font-weight: 300;
             }
 
             .check {
@@ -378,16 +360,18 @@ header {
         }
 
         .tech__card:nth-child(2),
-        .tech__card:nth-child(4) {
+        .tech__card:nth-child(4),
+        .tech__card:nth-child(6),
+        .tech__card:nth-child(8) {
             @include align (center, column, flex-end, 1rem);
             position: relative;
-            box-shadow: $shadow;
+            border: .1rem solid $bg-gray-20;
             border-radius: 1rem;
             padding: 0 0 2rem 0;
 
-            .fa-brands {
-                font-size: 3rem;
-                color: $lightGreen;
+            .brand {
+                font-size: 3.3rem;
+                color: $bg-yellow-10;
             }
 
             h1 {
@@ -404,38 +388,11 @@ header {
                 right: 10px;
             }
         }
-
-        .tech__card:nth-child(6),
-        .tech__card:nth-child(7) {
-            @include align (center, column, center, 0);
-            position: relative;
-            border-radius: 1rem;
-            box-shadow: $shadow-20;
-
-            .fa-brands {
-                font-size: 3rem;
-                color: $bg-gray-20;
-            }
-
-            h1 {
-                color: $bg-gray-20;
-                letter-spacing: .1rem;
-            }
-
-            .iconoir-refresh {
-                position: absolute;
-                color: $bg-dark-10;
-                top: 0 auto;
-                font-size: 3rem;
-                opacity: .5;
-
-                animation: spiner 2.5s infinite linear;
-            }
-        }
     }
 
     .tech__box:has(.tech__card:hover) .tech__card:not(:hover) {
-        opacity: .5;
+        opacity: .3;
+        transition: all .5s ease-in-out;
     }
 
     .reserved {
@@ -503,15 +460,11 @@ header {
             .tech__card:nth-child(4),
             .tech__card:nth-child(5),
             .tech__card:nth-child(6),
-            .tech__card:nth-child(7) {
+            .tech__card:nth-child(7),
+            .tech__card:nth-child(8),
+            .tech__card:nth-child(9) {
                 width: $width;
                 height: $height;
-            }
-
-            .tech__card:nth-child(6),
-            .tech__card:nth-child(7) {
-                width: 100px;
-                height: 175px;
             }
         }
 
@@ -649,15 +602,13 @@ header {
             .tech__card:nth-child(2),
             .tech__card:nth-child(3),
             .tech__card:nth-child(4),
-            .tech__card:nth-child(5) {
+            .tech__card:nth-child(5),
+            .tech__card:nth-child(6),
+            .tech__card:nth-child(7),
+            .tech__card:nth-child(8),
+            .tech__card:nth-child(9) {
                 width: $width;
                 height: $height;
-            }
-
-            .tech__card:nth-child(6),
-            .tech__card:nth-child(7) {
-                width: $width;
-                height: 100px;
             }
         }
 

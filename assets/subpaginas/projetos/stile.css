@@ -91,7 +91,7 @@ body #code-loader span:nth-child(even) {
   cursor: pointer;
 }
 #header .grpButton .toggle:hover {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   transition: 0.5s;
 }
 #header .grpButton .openBtn {
@@ -107,7 +107,7 @@ body #code-loader span:nth-child(even) {
   cursor: pointer;
 }
 #header .grpButton .openBtn:hover {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   transition: 0.5s;
 }
 
@@ -137,7 +137,7 @@ body #code-loader span:nth-child(even) {
 }
 .sidePanel .navMenu li a i {
   padding: 0 1rem 0 0;
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   font-size: 1.7rem;
 }
 .sidePanel .navMenu li .closedBtn {
@@ -190,7 +190,7 @@ body #code-loader span:nth-child(even) {
   color: #fafafa;
 }
 .darkMode .sidePanel .navMenu li a i {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
 }
 .darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
   opacity: 0.15;
@@ -277,7 +277,7 @@ body #code-loader span:nth-child(even) {
   box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
 }
 .container #myBtn:hover {
-  background-color: rgba(175, 171, 182, 0.6509803922);
+  background-color: rgba(175, 171, 182, 0.1254901961);
   color: #121214;
   transition: 0.3s ease-in-out;
 }

@@ -6,7 +6,7 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  font-family: "Manrope", sans-serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 html {
@@ -17,7 +17,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(rgba(12, 12, 12, 0.088) 2px, transparent 0);
+  background-image: radial-gradient(rgba(12, 12, 12, 0.13) 2px, transparent 0);
   background-size: 40px 40px;
   background-position: -5px -5px;
 }
@@ -27,15 +27,15 @@ body #code-loader {
   flex-direction: row;
   justify-content: center;
   gap: 0.5;
-  background-color: #17171A;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-color: #1B1C1E;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.11) 2px, transparent 0);
   background-size: 40px 40px;
   background-position: -5px -5px;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 6;
-  color: #FCF7FF;
+  color: #eaebed;
   font-weight: bold;
   font-size: 100px;
 }
@@ -61,20 +61,15 @@ header {
   width: 100%;
   height: 10vh;
 }
-header .navlogo i {
-  color: #121214;
-  font-size: 2rem;
-  opacity: 0.5;
-}
 header .grpButton {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-  background-color: #121214;
-  color: #FCF7FF;
-  border-radius: 0.7rem;
+  background-color: #1d1d27;
+  color: #eaebed;
+  border-radius: 10rem;
   box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
   width: 8.5rem;
   height: 3.3rem;
@@ -86,14 +81,14 @@ header .grpButton .toggle {
   justify-content: center;
   gap: 0;
   background-color: transparent;
-  color: #FCF7FF;
+  color: #eaebed;
   border: none;
   outline: none;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 header .grpButton .toggle:hover {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.4666666667);
   transition: 0.5s;
 }
 header .grpButton .openBtn {
@@ -103,14 +98,14 @@ header .grpButton .openBtn {
   justify-content: center;
   gap: 0;
   background-color: transparent;
-  color: #FCF7FF;
-  font-size: 1.6rem;
+  color: #eaebed;
+  font-size: 1.5rem;
   border: none;
   outline: none;
   cursor: pointer;
 }
 header .grpButton .openBtn:hover {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.4666666667);
   transition: 0.5s;
 }
 
@@ -135,12 +130,12 @@ header .grpButton .openBtn:hover {
   padding: 1rem 1rem 1rem 4rem;
   text-decoration: none;
   font-size: 1.5rem;
-  color: #FCF7FF;
+  color: #eaebed;
   display: block;
 }
 .sidePanel .navMenu li a i {
   padding: 0 1rem 0 0;
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.4666666667);
   font-size: 1.7rem;
 }
 .sidePanel .navMenu li .closedBtn {
@@ -151,7 +146,7 @@ header .grpButton .openBtn:hover {
 }
 .sidePanel .navMenu li .closedBtn i {
   font-size: 2rem;
-  color: #FCF7FF;
+  color: #eaebed;
 }
 
 .sidePanel:has(.item:hover) .item:not(:hover) {
@@ -159,26 +154,23 @@ header .grpButton .openBtn:hover {
 }
 
 .darkMode {
-  background-color: #17171A;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 0);
+  background-color: #1B1C1E;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.11) 2px, transparent 0);
   background-size: 40px 40px;
   background-position: -5px -5px;
   transition: 0.5s;
 }
-.darkMode header .navlogo i {
-  color: #FCF7FF;
-}
 .darkMode header .grpButton {
-  background-color: #FCF7FF;
+  background-color: #eaebed;
 }
 .darkMode header .grpButton .toggle {
-  color: #121214;
+  color: #1d1d27;
 }
 .darkMode header .grpButton .toggle:hover {
   color: #AFABB6;
 }
 .darkMode header .grpButton .openBtn {
-  color: #121214;
+  color: #1d1d27;
 }
 .darkMode header .grpButton .openBtn:hover {
   color: #AFABB6;
@@ -187,81 +179,82 @@ header .grpButton .openBtn:hover {
   background-color: #202024;
 }
 .darkMode .sidePanel .navMenu li a {
-  color: #FCF7FF;
+  color: #eaebed;
 }
 .darkMode .sidePanel .navMenu li a:hover, .darkMode .sidePanel .navMenu li a:hover i {
-  color: #FCF7FF;
+  color: #eaebed;
 }
 .darkMode .sidePanel .navMenu li a i {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.4666666667);
 }
 .darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
   opacity: 0.15;
 }
 .darkMode .tech__container #myBtn {
   background-color: #202024;
-  color: #FCF7FF;
+  color: #eaebed;
 }
 .darkMode .tech__container .tech__header h1 {
-  color: #FCF7FF;
+  color: #eaebed;
 }
 .darkMode .tech__container .tech__header p {
-  color: #FCF7FF;
+  color: #eaebed;
 }
 .darkMode .tech__container .tech__box .tech__card:nth-child(1),
 .darkMode .tech__container .tech__box .tech__card:nth-child(3),
-.darkMode .tech__container .tech__box .tech__card:nth-child(5) {
+.darkMode .tech__container .tech__box .tech__card:nth-child(5),
+.darkMode .tech__container .tech__box .tech__card:nth-child(7),
+.darkMode .tech__container .tech__box .tech__card:nth-child(9) {
   background-color: transparent;
 }
-.darkMode .tech__container .tech__box .tech__card:nth-child(1) .fa-brands,
-.darkMode .tech__container .tech__box .tech__card:nth-child(3) .fa-brands,
-.darkMode .tech__container .tech__box .tech__card:nth-child(5) .fa-brands {
-  color: #3bd291;
+.darkMode .tech__container .tech__box .tech__card:nth-child(1) .brand,
+.darkMode .tech__container .tech__box .tech__card:nth-child(3) .brand,
+.darkMode .tech__container .tech__box .tech__card:nth-child(5) .brand,
+.darkMode .tech__container .tech__box .tech__card:nth-child(7) .brand,
+.darkMode .tech__container .tech__box .tech__card:nth-child(9) .brand {
+  color: #ffaf2a;
 }
 .darkMode .tech__container .tech__box .tech__card:nth-child(1) h1,
 .darkMode .tech__container .tech__box .tech__card:nth-child(3) h1,
-.darkMode .tech__container .tech__box .tech__card:nth-child(5) h1 {
-  color: #FCF7FF;
+.darkMode .tech__container .tech__box .tech__card:nth-child(5) h1,
+.darkMode .tech__container .tech__box .tech__card:nth-child(7) h1,
+.darkMode .tech__container .tech__box .tech__card:nth-child(9) h1 {
+  color: #eaebed;
 }
 .darkMode .tech__container .tech__box .tech__card:nth-child(1) .check,
 .darkMode .tech__container .tech__box .tech__card:nth-child(3) .check,
-.darkMode .tech__container .tech__box .tech__card:nth-child(5) .check {
-  color: #FCF7FF;
+.darkMode .tech__container .tech__box .tech__card:nth-child(5) .check,
+.darkMode .tech__container .tech__box .tech__card:nth-child(7) .check,
+.darkMode .tech__container .tech__box .tech__card:nth-child(9) .check {
+  color: #eaebed;
 }
 .darkMode .tech__container .tech__box .tech__card:nth-child(2),
-.darkMode .tech__container .tech__box .tech__card:nth-child(4) {
+.darkMode .tech__container .tech__box .tech__card:nth-child(4),
+.darkMode .tech__container .tech__box .tech__card:nth-child(6),
+.darkMode .tech__container .tech__box .tech__card:nth-child(8) {
   background-color: #202024;
+  border: 0.1rem solid rgba(175, 171, 182, 0.1254901961);
 }
-.darkMode .tech__container .tech__box .tech__card:nth-child(2) .fa-brands,
-.darkMode .tech__container .tech__box .tech__card:nth-child(4) .fa-brands {
-  color: #3bd291;
+.darkMode .tech__container .tech__box .tech__card:nth-child(2) .brand,
+.darkMode .tech__container .tech__box .tech__card:nth-child(4) .brand,
+.darkMode .tech__container .tech__box .tech__card:nth-child(6) .brand,
+.darkMode .tech__container .tech__box .tech__card:nth-child(8) .brand {
+  color: #ffaf2a;
 }
 .darkMode .tech__container .tech__box .tech__card:nth-child(2) h1,
-.darkMode .tech__container .tech__box .tech__card:nth-child(4) h1 {
-  color: #FCF7FF;
+.darkMode .tech__container .tech__box .tech__card:nth-child(4) h1,
+.darkMode .tech__container .tech__box .tech__card:nth-child(6) h1,
+.darkMode .tech__container .tech__box .tech__card:nth-child(8) h1 {
+  color: #eaebed;
 }
 .darkMode .tech__container .tech__box .tech__card:nth-child(2) .check,
-.darkMode .tech__container .tech__box .tech__card:nth-child(4) .check {
-  color: #FCF7FF;
-}
-.darkMode .tech__container .tech__box .tech__card:nth-child(6),
-.darkMode .tech__container .tech__box .tech__card:nth-child(7) {
-  background-color: rgba(68, 68, 68, 0.168627451);
-}
-.darkMode .tech__container .tech__box .tech__card:nth-child(6) .fa-brands,
-.darkMode .tech__container .tech__box .tech__card:nth-child(7) .fa-brands {
-  color: rgba(68, 68, 68, 0.3843137255);
-}
-.darkMode .tech__container .tech__box .tech__card:nth-child(6) h1,
-.darkMode .tech__container .tech__box .tech__card:nth-child(7) h1 {
-  color: rgba(68, 68, 68, 0.3843137255);
-}
-.darkMode .tech__container .tech__box .tech__card:nth-child(6) .iconoir-refresh,
-.darkMode .tech__container .tech__box .tech__card:nth-child(7) .iconoir-refresh {
-  color: #AFABB6;
+.darkMode .tech__container .tech__box .tech__card:nth-child(4) .check,
+.darkMode .tech__container .tech__box .tech__card:nth-child(6) .check,
+.darkMode .tech__container .tech__box .tech__card:nth-child(8) .check {
+  color: #eaebed;
 }
 .darkMode .tech__container .reserved {
-  color: #FCF7FF;
+  color: #eaebed;
 }
 
 .tech__container {
@@ -277,8 +270,8 @@ header .grpButton .openBtn:hover {
 }
 .tech__container #myBtn {
   display: none;
-  background-color: #121214;
-  color: #FCF7FF;
+  background-color: #1d1d27;
+  color: #eaebed;
   position: fixed;
   height: 3.5rem;
   width: 3.5rem;
@@ -293,8 +286,8 @@ header .grpButton .openBtn:hover {
   box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
 }
 .tech__container #myBtn:hover {
-  background-color: rgba(175, 171, 182, 0.6509803922);
-  color: #121214;
+  background-color: rgba(175, 171, 182, 0.4666666667);
+  color: #1d1d27;
   transition: 0.3s ease-in-out;
 }
 .tech__container .tech__header {
@@ -309,7 +302,7 @@ header .grpButton .openBtn:hover {
 }
 .tech__container .tech__header p {
   font-size: 1.5rem;
-  color: #121214;
+  color: #1d1d27;
   opacity: 0.6;
 }
 .tech__container .tech__box {
@@ -325,109 +318,96 @@ header .grpButton .openBtn:hover {
 }
 .tech__container .tech__box .tech__card:nth-child(1),
 .tech__container .tech__box .tech__card:nth-child(3),
-.tech__container .tech__box .tech__card:nth-child(5) {
+.tech__container .tech__box .tech__card:nth-child(5),
+.tech__container .tech__box .tech__card:nth-child(7),
+.tech__container .tech__box .tech__card:nth-child(9) {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
   position: relative;
-  background-color: #121214;
+  background-color: #1d1d27;
   border-radius: 1rem;
   padding: 0 0 2rem 0;
   box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
 }
-.tech__container .tech__box .tech__card:nth-child(1) .fa-brands,
-.tech__container .tech__box .tech__card:nth-child(3) .fa-brands,
-.tech__container .tech__box .tech__card:nth-child(5) .fa-brands {
-  font-size: 3rem;
-  color: #3bd291;
+.tech__container .tech__box .tech__card:nth-child(1) .brand,
+.tech__container .tech__box .tech__card:nth-child(3) .brand,
+.tech__container .tech__box .tech__card:nth-child(5) .brand,
+.tech__container .tech__box .tech__card:nth-child(7) .brand,
+.tech__container .tech__box .tech__card:nth-child(9) .brand {
+  font-size: 3.3rem;
+  color: #ffaf2a;
 }
 .tech__container .tech__box .tech__card:nth-child(1) h1,
 .tech__container .tech__box .tech__card:nth-child(3) h1,
-.tech__container .tech__box .tech__card:nth-child(5) h1 {
-  color: #FCF7FF;
+.tech__container .tech__box .tech__card:nth-child(5) h1,
+.tech__container .tech__box .tech__card:nth-child(7) h1,
+.tech__container .tech__box .tech__card:nth-child(9) h1 {
+  color: #eaebed;
   letter-spacing: 0.1rem;
-  font-weight: 500;
+  font-weight: 300;
 }
 .tech__container .tech__box .tech__card:nth-child(1) .check,
 .tech__container .tech__box .tech__card:nth-child(3) .check,
-.tech__container .tech__box .tech__card:nth-child(5) .check {
+.tech__container .tech__box .tech__card:nth-child(5) .check,
+.tech__container .tech__box .tech__card:nth-child(7) .check,
+.tech__container .tech__box .tech__card:nth-child(9) .check {
   position: absolute;
   font-size: 1.4rem;
-  color: #FCF7FF;
+  color: #eaebed;
   top: 10px;
   right: 10px;
 }
 .tech__container .tech__box .tech__card:nth-child(2),
-.tech__container .tech__box .tech__card:nth-child(4) {
+.tech__container .tech__box .tech__card:nth-child(4),
+.tech__container .tech__box .tech__card:nth-child(6),
+.tech__container .tech__box .tech__card:nth-child(8) {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
+  border: 0.1rem solid rgba(175, 171, 182, 0.4666666667);
   border-radius: 1rem;
   padding: 0 0 2rem 0;
 }
-.tech__container .tech__box .tech__card:nth-child(2) .fa-brands,
-.tech__container .tech__box .tech__card:nth-child(4) .fa-brands {
-  font-size: 3rem;
-  color: #3bd291;
+.tech__container .tech__box .tech__card:nth-child(2) .brand,
+.tech__container .tech__box .tech__card:nth-child(4) .brand,
+.tech__container .tech__box .tech__card:nth-child(6) .brand,
+.tech__container .tech__box .tech__card:nth-child(8) .brand {
+  font-size: 3.3rem;
+  color: #ffaf2a;
 }
 .tech__container .tech__box .tech__card:nth-child(2) h1,
-.tech__container .tech__box .tech__card:nth-child(4) h1 {
-  color: #121214;
+.tech__container .tech__box .tech__card:nth-child(4) h1,
+.tech__container .tech__box .tech__card:nth-child(6) h1,
+.tech__container .tech__box .tech__card:nth-child(8) h1 {
+  color: #1d1d27;
   letter-spacing: 0.1rem;
   font-weight: 500;
 }
 .tech__container .tech__box .tech__card:nth-child(2) .check,
-.tech__container .tech__box .tech__card:nth-child(4) .check {
+.tech__container .tech__box .tech__card:nth-child(4) .check,
+.tech__container .tech__box .tech__card:nth-child(6) .check,
+.tech__container .tech__box .tech__card:nth-child(8) .check {
   position: absolute;
   font-size: 1.4rem;
-  color: #121214;
+  color: #1d1d27;
   top: 10px;
   right: 10px;
 }
-.tech__container .tech__box .tech__card:nth-child(6),
-.tech__container .tech__box .tech__card:nth-child(7) {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0;
-  position: relative;
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 5px 20px;
-}
-.tech__container .tech__box .tech__card:nth-child(6) .fa-brands,
-.tech__container .tech__box .tech__card:nth-child(7) .fa-brands {
-  font-size: 3rem;
-  color: rgba(175, 171, 182, 0.6509803922);
-}
-.tech__container .tech__box .tech__card:nth-child(6) h1,
-.tech__container .tech__box .tech__card:nth-child(7) h1 {
-  color: rgba(175, 171, 182, 0.6509803922);
-  letter-spacing: 0.1rem;
-}
-.tech__container .tech__box .tech__card:nth-child(6) .iconoir-refresh,
-.tech__container .tech__box .tech__card:nth-child(7) .iconoir-refresh {
-  position: absolute;
-  color: #121214;
-  top: 0 auto;
-  font-size: 3rem;
-  opacity: 0.5;
-  animation: spiner 2.5s infinite linear;
-}
 .tech__container .tech__box:has(.tech__card:hover) .tech__card:not(:hover) {
-  opacity: 0.5;
+  opacity: 0.3;
+  transition: all 0.5s ease-in-out;
 }
 .tech__container .reserved {
   position: absolute;
   font-weight: 600;
   left: auto;
-  color: #121214;
+  color: #1d1d27;
   z-index: 1;
 }
 
@@ -446,12 +426,12 @@ header .grpButton .openBtn:hover {
   }
 }
 ::-webkit-scrollbar {
-  background-color: #FCF7FF;
+  background-color: #eaebed;
   width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #121214;
+  background-color: #1d1d27;
   width: auto;
   height: auto;
 }
@@ -469,13 +449,10 @@ header .grpButton .openBtn:hover {
   .tech__container .tech__box .tech__card:nth-child(4),
   .tech__container .tech__box .tech__card:nth-child(5),
   .tech__container .tech__box .tech__card:nth-child(6),
-  .tech__container .tech__box .tech__card:nth-child(7) {
+  .tech__container .tech__box .tech__card:nth-child(7),
+  .tech__container .tech__box .tech__card:nth-child(8),
+  .tech__container .tech__box .tech__card:nth-child(9) {
     width: 175px;
-    height: 175px;
-  }
-  .tech__container .tech__box .tech__card:nth-child(6),
-  .tech__container .tech__box .tech__card:nth-child(7) {
-    width: 100px;
     height: 175px;
   }
   .tech__container .reserved {
@@ -570,14 +547,13 @@ header .grpButton .openBtn:hover {
   .tech__container .tech__box .tech__card:nth-child(2),
   .tech__container .tech__box .tech__card:nth-child(3),
   .tech__container .tech__box .tech__card:nth-child(4),
-  .tech__container .tech__box .tech__card:nth-child(5) {
+  .tech__container .tech__box .tech__card:nth-child(5),
+  .tech__container .tech__box .tech__card:nth-child(6),
+  .tech__container .tech__box .tech__card:nth-child(7),
+  .tech__container .tech__box .tech__card:nth-child(8),
+  .tech__container .tech__box .tech__card:nth-child(9) {
     width: 180px;
     height: 180px;
-  }
-  .tech__container .tech__box .tech__card:nth-child(6),
-  .tech__container .tech__box .tech__card:nth-child(7) {
-    width: 180px;
-    height: 100px;
   }
   .tech__container .reserved {
     font-size: 0.8rem;

@@ -1,130 +1,152 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- import css -->
-    <link rel="stylesheet" href="stile.css">
-    <!-- import icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
-    <!-- import favicon -->
-    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
-    <title>Habilidades</title>
-</head>
-<body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- import css -->
+        <link rel="stylesheet" href="stile.css">
+        <!-- import icon -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+        <!-- import favicon -->
+        <link rel="shortcut icon" href="../../img/favicon.ico"
+            type="image/x-icon">
+        <!-- import font -->
+        <link
+            href="https://api.fontshare.com/v2/css?f[]=satoshi@300,500,700,900,1&display=swap"
+            rel="stylesheet">
+        <title>Habilidades</title>
+    </head>
+    <body>
 
-    <article id="code-loader">
-        <span>{</span>
-        <span>}</span>
-    </article>
+        <article id="code-loader">
+            <span>{</span>
+            <span>}</span>
+        </article>
 
-    <header>
-        <div class="navlogo">
-            <i class="iconoir-code-brackets-square"></i>
-        </div>
+        <header>
+            <nav id="mySidePanel" class="sidePanel">
+                <ul class="navMenu">
+                    <li>
+                        <a href="#" class="closedBtn" onclick="closedNav()">
+                            <i class="iconoir-xmark"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../../index.html" class="item">
+                            <i class="iconoir-user-circle"></i>
+                            Sobre mim
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../projetos/index.html" class="item">
+                            <i class="iconoir-folder"></i>
+                            Projetos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../servicos/index.html" class="item">
+                            <i class="iconoir-edit-pencil"></i>
+                            Serviços
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-        <nav id="mySidePanel" class="sidePanel">
-            <ul class="navMenu">
-                <li>
-                    <a href="#" class="closedBtn" onclick="closedNav()">
-                        <i class="iconoir-xmark"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="../../../index.html" class="item">
-                        <i class="iconoir-user-circle"></i>
-                        Sobre mim
-                    </a>
-                </li>
-                <li>
-                    <a href="../projetos/index.html" class="item">
-                        <i class="iconoir-folder"></i>
-                        Projetos
-                    </a>
-                </li>
-                <li>
-                    <a href="../servicos/index.html" class="item">
-                        <i class="iconoir-edit-pencil"></i>
-                        Serviços
-                    </a>
-                </li>
-            </ul>
-        </nav>
+            <div class="grpButton">
+                <button class="toggle" onclick="toggleTheme()">
+                    <i id="themeIcon" class="iconoir-half-moon"></i>
+                </button>
 
-        <div class="grpButton">
-            <button class="toggle" onclick="toggleTheme()">
-                <i id="themeIcon" class="iconoir-half-moon"></i>
-            </button>
-    
-            <button class="openBtn" onclick="openNav()">
-                <i class="iconoir-menu-scale"></i>
-            </button>
-        </div>
-    </header>
-
-    <main>
-        <section class="tech__container">
-            <button onclick="topFunction()" id="myBtn" title="Go to top">
-                <i class="iconoir-dot-arrow-up"></i>
-            </button>
-            
-            <div class="tech__header">
-                <p>Meu conhecimento técnico.</p>
+                <button class="openBtn" onclick="openNav()">
+                    <i class="iconoir-menu-scale"></i>
+                </button>
             </div>
+        </header>
 
-            <div class="tech__box">
-                
-                <article class="tech__card">
-                    <i class="iconoir-badge-check check"></i>
-                    <i class="fa-brands fa-html5"></i>
-                    <h1>Html</h1>
+        <main>
+            <section class="tech__container">
+                <!-- button go to top -->
+                <button onclick="topFunction()" id="myBtn" title="Go to top">
+                    <i class="iconoir-dot-arrow-up"></i>
+                </button>
+
+                <article class="tech__header">
+                    <p>Meu conhecimento técnico.</p>
                 </article>
 
-                <article class="tech__card">
-                    <i class="iconoir-badge-check check"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <h1>Css</h1>
-                </article>
+                <section class="tech__box">
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <i class="fa-brands fa-html5 brand"></i>
+                        <h1>Html</h1>
+                    </article>
 
-                <article class="tech__card">
-                    <i class="iconoir-badge-check check"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <h1>JavaScript</h1>
-                </article>
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <i class="fa-brands fa-css3-alt brand"></i>
+                        <h1>Css</h1>
+                    </article>
 
-                <article class="tech__card">
-                    <i class="iconoir-badge-check check"></i>
-                    <i class="fa-brands fa-sass"></i>
-                    <h1>Sass</h1>
-                </article>
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <i class="fa-brands fa-js brand"></i>
+                        <h1>JavaScript</h1>
+                    </article>
 
-                <article class="tech__card">
-                    <i class="iconoir-badge-check check"></i>
-                    <i class="fa-brands fa-git-alt"></i>
-                    <h1>Git</h1>
-                </article>
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <i class="fa-brands fa-sass brand"></i>
+                        <h1>Sass</h1>
+                    </article>
 
-                <article class="tech__card">
-                    <i class="fa-brands fa-wordpress"></i>
-                    <i class="iconoir-refresh"></i>
-                </article>
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <i class="fa-brands fa-git-alt brand"></i>
+                        <h1>Git</h1>
+                    </article>
 
-                <article class="tech__card">
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <i class="iconoir-refresh"></i>
-                </article>
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <i class="fa-brands fa-wordpress brand"></i>
+                        <h1>Wordpress</h1>
+                    </article>
 
-            </div>
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <i class="fa-brands fa-bootstrap brand"></i>
+                        <h1>Bootstrap</h1>
+                    </article>
 
-            <span class="reserved"><strong>©  Douglas Sá</strong>. All rigths reserved.</span>
-        </section>
-    </main>
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <i class="fa-solid fa-database brand"></i>
+                        <h1>MySql</h1>
+                    </article>
 
-    <!-- loader -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- import icon font awesome -->
-    <script src="https://kit.fontawesome.com/230c6978e0.js" crossorigin="anonymous"></script>
-    <!-- import js -->
-    <script src="app.js"></script>
-</body>
+                    <article class="tech__card">
+                        <i class="iconoir-badge-check check"></i>
+                        <ion-icon name="logo-firebase" class="brand"></ion-icon>
+                        <h1>Firebase</h1>
+                    </article>
+                </section>
+
+                <span class="reserved"><strong>© Douglas Sá</strong>. All rigths
+                    reserved.</span>
+            </section>
+        </main>
+
+        <!-- loader -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- import icon font awesome -->
+        <script src="https://kit.fontawesome.com/230c6978e0.js"
+            crossorigin="anonymous"></script>
+        <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- import js -->
+        <script src="app.js"></script>
+    </body>
 </html>
