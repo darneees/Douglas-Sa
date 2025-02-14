@@ -87,7 +87,7 @@ header .grpButton .toggle {
   border-radius: 0.7rem;
 }
 header .grpButton .toggle:hover {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   transition: 0.5s;
 }
 header .grpButton .openBtn {
@@ -104,7 +104,7 @@ header .grpButton .openBtn {
   border-radius: 10px;
 }
 header .grpButton .openBtn:hover {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   transition: 0.5s;
 }
 
@@ -131,7 +131,7 @@ header .grpButton .openBtn:hover {
 }
 .sidePanel a i {
   padding: 0 1rem 0 0;
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
   font-size: 1.7rem;
 }
 .sidePanel .closedBtn {
@@ -184,7 +184,7 @@ header .grpButton .openBtn:hover {
   color: #fafafa;
 }
 .darkMode .sidePanel a i {
-  color: rgba(175, 171, 182, 0.6509803922);
+  color: rgba(175, 171, 182, 0.1254901961);
 }
 .darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
   opacity: 0.15;

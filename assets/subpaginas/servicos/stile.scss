@@ -215,7 +215,7 @@ header {
                 border: none;
 
                 i {
-                    color: $lightGreen;
+                    color: $bg-lightgreen-10;
                 }
 
                 h2 {
@@ -228,7 +228,7 @@ header {
                 }
 
                 &:hover {
-                    border: .1rem solid $lightGreen;
+                    border: .1rem solid $bg-lightgreen-10;
                     transition: all 1s ease-in-out;
                 }
             }
@@ -239,7 +239,7 @@ header {
                 padding: 30px 20px 20px 20px;
 
                 i {
-                    color: $lightGreen;
+                    color: $bg-lightgreen-10;
                 }
 
                 h2 {
@@ -252,7 +252,7 @@ header {
                 }
 
                 &:hover {
-                    border: .1rem solid $lightGreen;
+                    border: .1rem solid $bg-lightgreen-10;
                     transition: all .7s linear;
                 }
             }
@@ -262,7 +262,7 @@ header {
                 border: none;
 
                 i {
-                    color: $lightGreen;
+                    color: $bg-lightgreen-10;
                 }
 
                 h2 {
@@ -275,7 +275,7 @@ header {
                 }
 
                 &:hover {
-                    border: .1rem solid $lightGreen;
+                    border: .1rem solid $bg-lightgreen-10;
                     transition: all 1s ease-in-out;
                 }
             }
@@ -314,7 +314,7 @@ header {
             gap: 10px;
 
             .icon {
-                color: $lightGreen;
+                color: $bg-lightgreen-10;
             }
 
             h2 {
@@ -346,7 +346,7 @@ header {
             padding: 30px 20px 40px 20px;
 
             .icon {
-                color: $lightGreen;
+                color: $bg-lightgreen-10;
             }
 
             h2 {
@@ -378,7 +378,7 @@ header {
             gap: 10px;
 
             .icon {
-                color: $lightGreen;
+                color: $bg-lightgreen-10;
             }
 
             h2 {
@@ -415,7 +415,7 @@ header {
 }
 
 ::selection {
-    background-color: $lightGreen;
+    background-color: $bg-lightgreen-10;
     color: $white;
 }
 

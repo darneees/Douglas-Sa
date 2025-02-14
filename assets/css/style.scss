@@ -60,7 +60,7 @@ header {
         gap: .5rem;
         background-color: $bg-dark-10;
         color: $white;
-        border-radius: .7rem;
+        border-radius: 10rem;
         box-shadow: $shadow;
         width: 8.5rem;
         height: 3.3rem;
@@ -220,7 +220,7 @@ header {
                         color: $bg-gray-10;
 
                         i {
-                            color: $yellow-10;
+                            color: $bg-yellow-10;
                         }
                     }
                 }
@@ -239,7 +239,7 @@ header {
 
                 &:hover {
                     i {
-                        background-color: $yellow-10;
+                        background-color: $bg-yellow-10;
                         border: 3px solid $bg-dark-30;
                         color: $white;
                     }
@@ -344,12 +344,12 @@ header {
 
 
                     #load {
-                        color: $yellow-10;
+                        color: $bg-yellow-10;
 
                     }
 
                     i {
-                        color: $yellow-10;
+                        color: $bg-yellow-10;
                         font-size: 1.5rem;
                         padding: 0 1rem 0 0;
                     }
@@ -385,7 +385,7 @@ header {
 
             &:hover {
                 i {
-                    background-color: $yellow-10;
+                    background-color: $bg-yellow-10;
                     color: $white;
                     width: 100%;
                     font-size: 1.5rem;
@@ -424,7 +424,7 @@ header {
         #modalBtn {
             @include align (center, row, space-between);
             background-color: transparent;
-            color: $yellow-10;
+            color: $bg-yellow-10;
             font-size: 1.25rem;
             width: 7rem;
             border: none;
@@ -433,7 +433,7 @@ header {
             cursor: pointer;
 
             i {
-                color: $yellow-10;
+                color: $bg-yellow-10;
                 font-size: 1.5rem;
             }
         }
@@ -485,7 +485,7 @@ header {
 // selection
 
 ::selection {
-    background-color: $yellow-10;
+    background-color: $bg-yellow-10;
     color: $white;
 }
 
