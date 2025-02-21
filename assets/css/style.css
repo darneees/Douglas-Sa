@@ -126,8 +126,9 @@ header .grpButton .openBtn:hover {
 }
 .sidePanel .navMenu li a ion-icon {
   padding: 0 1rem 0 0;
-  color: rgba(175, 171, 182, 0.1254901961);
+  color: #ffaf2a;
   font-size: 1.5rem;
+  opacity: 0.4;
 }
 .sidePanel .navMenu li .closedBtn {
   position: absolute;
@@ -172,11 +173,12 @@ header .grpButton .openBtn:hover {
 .darkMode .sidePanel .navMenu li a {
   color: #eaebed;
 }
-.darkMode .sidePanel .navMenu li a:hover, .darkMode .sidePanel .navMenu li a:hover i {
-  color: #eaebed;
+.darkMode .sidePanel .navMenu li a ion-icon {
+  color: #ffaf2a;
+  opacity: 0.4;
 }
-.darkMode .sidePanel .navMenu li a i {
-  color: rgba(175, 171, 182, 0.1254901961);
+.darkMode .sidePanel .navMenu li .closedBtn i {
+  color: #eaebed;
 }
 .darkMode .sidePanel:has(.item:hover) .item:not(:hover) {
   opacity: 0.15;
