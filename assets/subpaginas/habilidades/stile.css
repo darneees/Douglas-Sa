@@ -133,9 +133,10 @@ header .grpButton .openBtn:hover {
   color: #eaebed;
   display: block;
 }
-.sidePanel .navMenu li a i {
+.sidePanel .navMenu li a ion-icon {
   padding: 0 1rem 0 0;
-  color: rgba(175, 171, 182, 0.4666666667);
+  color: #ffaf2a;
+  opacity: 0.4;
   font-size: 1.7rem;
 }
 .sidePanel .navMenu li .closedBtn {
@@ -206,6 +207,7 @@ header .grpButton .openBtn:hover {
 .darkMode .tech__container .tech__box .tech__card:nth-child(7),
 .darkMode .tech__container .tech__box .tech__card:nth-child(9) {
   background-color: transparent;
+  border: 0.1rem solid rgba(175, 171, 182, 0.0901960784);
 }
 .darkMode .tech__container .tech__box .tech__card:nth-child(1) .brand,
 .darkMode .tech__container .tech__box .tech__card:nth-child(3) .brand,
@@ -232,8 +234,8 @@ header .grpButton .openBtn:hover {
 .darkMode .tech__container .tech__box .tech__card:nth-child(4),
 .darkMode .tech__container .tech__box .tech__card:nth-child(6),
 .darkMode .tech__container .tech__box .tech__card:nth-child(8) {
-  background-color: #202024;
-  border: 0.1rem solid rgba(175, 171, 182, 0.1254901961);
+  background-color: #313131;
+  border: 0.1rem solid rgba(175, 171, 182, 0.1450980392);
 }
 .darkMode .tech__container .tech__box .tech__card:nth-child(2) .brand,
 .darkMode .tech__container .tech__box .tech__card:nth-child(4) .brand,
@@ -331,6 +333,7 @@ header .grpButton .openBtn:hover {
   border-radius: 1rem;
   padding: 0 0 2rem 0;
   box-shadow: rgba(0, 0, 0, 0.45) 0 5px 20px;
+  cursor: pointer;
 }
 .tech__container .tech__box .tech__card:nth-child(1) .brand,
 .tech__container .tech__box .tech__card:nth-child(3) .brand,
@@ -373,6 +376,7 @@ header .grpButton .openBtn:hover {
   border: 0.1rem solid rgba(175, 171, 182, 0.4666666667);
   border-radius: 1rem;
   padding: 0 0 2rem 0;
+  cursor: pointer;
 }
 .tech__container .tech__box .tech__card:nth-child(2) .brand,
 .tech__container .tech__box .tech__card:nth-child(4) .brand,
@@ -400,7 +404,7 @@ header .grpButton .openBtn:hover {
   right: 10px;
 }
 .tech__container .tech__box:has(.tech__card:hover) .tech__card:not(:hover) {
-  opacity: 0.3;
+  opacity: 0.25;
   transition: all 0.5s ease-in-out;
 }
 .tech__container .reserved {

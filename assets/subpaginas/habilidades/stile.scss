@@ -124,9 +124,10 @@ header {
                 color: $white;
                 display: block;
 
-                i {
+                ion-icon {
                     padding: 0 1rem 0 0;
-                    color: $bg-gray-20;
+                    color: $bg-yellow-10;
+                    opacity: .4;
                     font-size: 1.7rem;
                 }
             }
@@ -229,6 +230,7 @@ header {
             .tech__card:nth-child(7),
             .tech__card:nth-child(9) {
                 background-color: transparent;
+                border: .1rem solid $bg-gray-40;
 
                 .brand {
                     color: $bg-yellow-10;
@@ -247,7 +249,7 @@ header {
             .tech__card:nth-child(4),
             .tech__card:nth-child(6),
             .tech__card:nth-child(8) {
-                background-color: $bg-dark-30;
+                background-color: $bg-dark-40;
                 border: .1rem solid $bg-gray-30;
 
                 .brand {
@@ -338,6 +340,7 @@ header {
             border-radius: 1rem;
             padding: 0 0 2rem 0;
             box-shadow: $shadow;
+            cursor: pointer;
 
             .brand {
                 font-size: 3.3rem;
@@ -368,6 +371,7 @@ header {
             border: .1rem solid $bg-gray-20;
             border-radius: 1rem;
             padding: 0 0 2rem 0;
+            cursor: pointer;
 
             .brand {
                 font-size: 3.3rem;
@@ -391,7 +395,7 @@ header {
     }
 
     .tech__box:has(.tech__card:hover) .tech__card:not(:hover) {
-        opacity: .3;
+        opacity: .25;
         transition: all .5s ease-in-out;
     }
 
