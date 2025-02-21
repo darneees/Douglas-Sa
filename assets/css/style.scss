@@ -208,6 +208,10 @@ header {
 
             h2 {
                 color: $white;
+
+                ion-icon {
+                    color: $bg-yellow-10;
+                }
             }
 
             #closeBtn {
@@ -231,6 +235,10 @@ header {
                 border: 3px solid $bg-gray-20;
                 color: $white;
 
+                p {
+                    color: $white;
+                }
+
                 i {
                     background-color: $white;
                     border: 3px solid $bg-dark-10;
@@ -241,7 +249,7 @@ header {
                     i {
                         background-color: $bg-yellow-10;
                         border: 3px solid $bg-dark-30;
-                        color: $white;
+                        color: $bg-dark-10;
                     }
                 }
             }
@@ -365,12 +373,19 @@ header {
             color: $bg-dark-30;
             width: 7.5rem;
             height: 3.5rem;
-            border-radius: .6rem;
-            padding: 0 0 0 1rem;
-            font-size: 1rem;
-            font-weight: 600;
+            border-radius: 1rem;
+            padding: 0 0 0 1rem;            
             cursor: pointer;
-            text-transform: uppercase;
+            position: relative;
+            
+            p {
+                font-size: 1.2rem;
+                color: $bg-dark-30;
+                font-weight: 400;
+                font-size: 1.2rem;
+                text-transform: lowercase;
+                z-index: 3;
+            }
 
             i {
                 @include align (center, row, center);
@@ -380,13 +395,23 @@ header {
                 color: $white;
                 height: 100%;
                 width: 4rem;
-                border-radius: .5rem;
+                border-radius: .9rem;
+                z-index: 4;
             }
 
             &:hover {
+                padding: 0;
+
+                p {
+                    display: none;
+                }
+
                 i {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                     background-color: $bg-yellow-10;
-                    color: $white;
+                    color: $bg-dark-10;
                     width: 100%;
                     font-size: 1.5rem;
                     transition: .5s;
@@ -425,11 +450,12 @@ header {
             @include align (center, row, space-between);
             background-color: transparent;
             color: $bg-yellow-10;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             width: 7rem;
             border: none;
             outline: none;
-            font-weight: 700;
+            font-weight: 500;
+            text-transform: uppercase;
             cursor: pointer;
 
             i {
@@ -448,6 +474,11 @@ header {
 
                 i {
                     font-size: 2.2rem;
+                }
+
+                &:hover {
+                    color: $bg-yellow-10;
+                    transition: .5s ease-in-out;
                 }
             }
         }
@@ -579,7 +610,7 @@ header {
             .cv-link {
                 width: 7.5rem;
                 height: 3.5rem;
-                bottom: 2.5rem;
+                bottom: 0;
 
                 i {
                     width: 3.2rem;
@@ -590,10 +621,6 @@ header {
                     font-size: 1.5rem;
                 }
             }
-
-            // .other-links {
-            //     right: 3rem;
-            // }
         }
 
         .secContent {
@@ -647,7 +674,7 @@ header {
             .cv-link {
                 width: 7.5rem;
                 height: 3.5rem;
-                bottom: 2.5rem;
+                bottom: 0;
 
                 i {
                     width: 3.2rem;
@@ -658,10 +685,6 @@ header {
                     font-size: 1.5rem;
                 }
             }
-
-            // .other-links {
-            //     right: 3rem;
-            // }
         }
 
         .secContent {
@@ -716,7 +739,7 @@ header {
             .cv-link {
                 width: 7.5rem;
                 height: 3.5rem;
-                bottom: 2.5rem;
+                bottom: 0;
 
                 i {
                     width: 3.2rem;
@@ -784,15 +807,15 @@ header {
             .cv-link {
                 width: 7.5rem;
                 height: 3.5rem;
-                bottom: 2rem;
+                bottom: 0;
 
                 i {
-                    width: 3.2rem;
+                    width: 3.5rem;
                     font-size: 1rem;
                 }
 
                 &:hover i {
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                 }
             }
         }

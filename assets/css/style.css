@@ -187,6 +187,9 @@ header .grpButton .openBtn:hover {
 .darkMode .secContainer #modal h2 {
   color: #eaebed;
 }
+.darkMode .secContainer #modal h2 ion-icon {
+  color: #ffaf2a;
+}
 .darkMode .secContainer #modal #closeBtn {
   color: #eaebed;
 }
@@ -201,6 +204,9 @@ header .grpButton .openBtn:hover {
   border: 3px solid rgba(175, 171, 182, 0.1254901961);
   color: #eaebed;
 }
+.darkMode .secContainer #modal .cv-link p {
+  color: #eaebed;
+}
 .darkMode .secContainer #modal .cv-link i {
   background-color: #eaebed;
   border: 3px solid #1d1d27;
@@ -209,7 +215,7 @@ header .grpButton .openBtn:hover {
 .darkMode .secContainer #modal .cv-link:hover i {
   background-color: #ffaf2a;
   border: 3px solid #202024;
-  color: #eaebed;
+  color: #1d1d27;
 }
 .darkMode .secContainer .secContent h1 {
   color: #1B1C1E;
@@ -328,12 +334,18 @@ header .grpButton .openBtn:hover {
   color: #202024;
   width: 7.5rem;
   height: 3.5rem;
-  border-radius: 0.6rem;
+  border-radius: 1rem;
   padding: 0 0 0 1rem;
-  font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
-  text-transform: uppercase;
+  position: relative;
+}
+.secContainer #modal .cv-link p {
+  font-size: 1.2rem;
+  color: #202024;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  z-index: 3;
 }
 .secContainer #modal .cv-link i {
   display: flex;
@@ -346,11 +358,21 @@ header .grpButton .openBtn:hover {
   color: #eaebed;
   height: 100%;
   width: 4rem;
-  border-radius: 0.5rem;
+  border-radius: 0.9rem;
+  z-index: 4;
+}
+.secContainer #modal .cv-link:hover {
+  padding: 0;
+}
+.secContainer #modal .cv-link:hover p {
+  display: none;
 }
 .secContainer #modal .cv-link:hover i {
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: #ffaf2a;
-  color: #eaebed;
+  color: #1d1d27;
   width: 100%;
   font-size: 1.5rem;
   transition: 0.5s;
@@ -388,11 +410,12 @@ header .grpButton .openBtn:hover {
   justify-content: space-between;
   background-color: transparent;
   color: #ffaf2a;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   width: 7rem;
   border: none;
   outline: none;
-  font-weight: 700;
+  font-weight: 500;
+  text-transform: uppercase;
   cursor: pointer;
 }
 .secContainer .secContent #modalBtn i {
@@ -412,6 +435,10 @@ header .grpButton .openBtn:hover {
 }
 .secContainer .secContent .section-links a i {
   font-size: 2.2rem;
+}
+.secContainer .secContent .section-links a:hover {
+  color: #ffaf2a;
+  transition: 0.5s ease-in-out;
 }
 
 @keyframes ocean {
@@ -510,7 +537,7 @@ header .grpButton .openBtn:hover {
   .secContainer #modal .cv-link {
     width: 7.5rem;
     height: 3.5rem;
-    bottom: 2.5rem;
+    bottom: 0;
   }
   .secContainer #modal .cv-link i {
     width: 3.2rem;
@@ -563,7 +590,7 @@ header .grpButton .openBtn:hover {
   .secContainer #modal .cv-link {
     width: 7.5rem;
     height: 3.5rem;
-    bottom: 2.5rem;
+    bottom: 0;
   }
   .secContainer #modal .cv-link i {
     width: 3.2rem;
@@ -617,7 +644,7 @@ header .grpButton .openBtn:hover {
   .secContainer #modal .cv-link {
     width: 7.5rem;
     height: 3.5rem;
-    bottom: 2.5rem;
+    bottom: 0;
   }
   .secContainer #modal .cv-link i {
     width: 3.2rem;
@@ -674,14 +701,14 @@ header .grpButton .openBtn:hover {
   .secContainer #modal .cv-link {
     width: 7.5rem;
     height: 3.5rem;
-    bottom: 2rem;
+    bottom: 0;
   }
   .secContainer #modal .cv-link i {
-    width: 3.2rem;
+    width: 3.5rem;
     font-size: 1rem;
   }
   .secContainer #modal .cv-link:hover i {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .secContainer .secContent {
     display: flex;
